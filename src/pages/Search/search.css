@@ -1,0 +1,242 @@
+.search_component {
+    padding: 100px 200px 50px 200px;
+    background-color: #04152d;
+}
+
+.search_component .search_row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.search_component .category {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 25px;
+    text-transform: capitalize;
+    padding: 10px 0 30px 0;
+}
+
+.search_component .movie {
+    width: 200px;
+}
+
+.search_component .movie img {
+    border-radius: 20px;
+    height: 320px;
+    z-index: 1;
+    position: relative;
+}
+
+.search_component .movie .year {
+    background-color: #fff;
+    width: 55px;
+    height: 55px;
+    display: grid;
+    align-items: center;
+    margin-top: -25px;
+    z-index: 2;
+    border-radius: 50%;
+    position: relative;
+}
+
+.search_component .movie .year p {
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgb(76, 187, 23);
+    border-radius: 50%;
+    align-items: center;
+    display: grid;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: #fff;
+
+}
+
+.search_component .movie .title a {
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+    font-weight: 400;
+    color: #fff;
+    font-size: 18px;
+
+}
+
+.title {
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.loading img {
+    font-size: 10px;
+    margin: auto;
+}
+
+.not_found {
+    height: 100vh;
+    background-image: url("https://media.giphy.com/media/eIsBUaOERJ3MrkkBL3/giphy.gif?cid=790b7611rxf5ni5cabt5f7in3kw7garosgf8deoekpuxxeau&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* position: relative;
+    z-index: 100; */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.not_found p {
+    font-family: "Inter", sans-serif;
+    font-size: 2.6rem;
+    color: #fff;
+    padding: 0 5%;
+}
+
+.not_found button {
+    padding: 15px 25px;
+    background: linear-gradient(98.37deg, #f89e00 .99%, #da2f68 100%);
+    border-radius: 20em;
+}
+
+.not_found a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.paginate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    list-style: none;
+}
+
+.paginate li {
+    display: flex;
+}
+
+.paginate a {
+    display: flex;
+    margin: auto;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    margin: 20px 5px;
+    border: 1px solid rgb(139 92 246);
+    color: rgb(139 92 246);
+    align-items: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.paginate a:hover {
+    background-color: rgb(139, 92, 246, 0.6);
+    color: #fff;
+}
+
+.paginate .active a {
+    color: #fff;
+    background-color: rgb(139 92 246);
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+    line-height: 20px;
+    border-radius: 15px;
+}
+
+.image-container:hover .image-overlay {
+    opacity: 1;
+}
+
+
+
+@media (max-width: 1440px) and (min-width: 1025px) {
+    .not_found p {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .not_found p {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 481px) {
+    .not_found p {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .not_found p {
+        font-size: 1.7rem;
+    }
+
+    .paginate a {
+        width: 30px;
+        height: 30px;
+    }
+
+    .category {
+        font-size: 18px !important;
+    }
+
+    .image-overlay {
+        display: none;
+    }
+}
+
+@media (max-width: 320px) {
+    .not_found p {
+        font-size: 1.7rem;
+    }
+
+    .paginate a {
+        width: 30px;
+        height: 30px;
+    }
+
+    .category {
+        font-size: 16px !important;
+    }
+
+    .image-overlay {
+        display: none;
+    }
+}

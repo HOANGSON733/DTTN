@@ -1,0 +1,19 @@
+.info_container{
+    padding: 100px 10% 0 10%;
+    color: #fff;
+    /* font-family: "Inter", sans-serif; */
+
+}
+
+.info_container h1{
+    font-size: 30px;
+    text-align: center;
+    margin: 20px;
+}
+
+.info_container p{
+    line-height: 30px;
+    text-align: justify;
+    color: #d8d8d8;
+    font-size: 14px;
+}

@@ -1,0 +1,115 @@
+.filter_form {
+    display: flex;
+    gap: 20px;
+    background-color: #04152d;
+    padding: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter_form select {
+    border: 1px solid rgb(139 92 246);
+    /* padding: 10px 20px; */
+    height: 40px;
+    width: 170px;
+    background-color: rgba(4, 21, 45);
+    color: #fff;
+    border-radius: 5px;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+
+}
+
+.filter_form option {
+    color: #fff;
+    filter: blur(50px);
+
+}
+
+.filter_form option:hover {
+    background-color: red;
+    background-color: rgb(139 92 246);
+}
+
+.filter_form button {
+    border: 1px solid rgb(139 92 246);
+    color: #fff;
+    border-radius: 5px;
+    padding: 0 40px;
+    width: 170px;
+    height: 40px;
+    background-color: #04152d;
+
+}
+
+.filter_form button:hover {
+    background-color: rgb(139 92 246);
+}
+
+.filter_form i {
+    font-size: 80%;
+}
+
+@media (max-width:700px) {
+    .filter_form {
+        display: grid;
+        column-gap: 5px;
+        grid-template-columns: repeat(5, 1fr) !important;
+        justify-content: center !important;
+        margin: auto;
+        gap: 5px;
+        padding: 10px 5px;
+    }
+
+
+    .filter_form select {
+        width: 100%;
+        height: 35px;
+        font-size: 10px;
+        padding: 2px 4px;
+        text-align: center;
+    }
+
+    .filter_form button {
+        width: 50px;
+        height: 35px;
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+}
+
+@media (max-width:320px) {
+    .filter_form {
+        display: grid;
+        column-gap: 5px;
+        grid-template-columns: repeat(3, 90px) !important;
+        justify-content: center !important;
+        margin: auto;
+        gap: 5px;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .filter_form select {
+        width: 100%;
+        height: 30px;
+        font-size: 10px;
+        padding: 2px 4px;
+        text-align: center;
+    }
+
+    .filter_form button {
+        width: 100%;
+        height: 30px;
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+}

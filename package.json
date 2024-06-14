@@ -1,0 +1,126 @@
+{
+
+  "name": "movie",
+
+  "version": "0.1.0",
+
+  "private": true,
+
+  "dependencies": {
+
+    "@cloudinary/react": "^1.13.0",
+
+    "@cloudinary/url-gen": "^1.19.0",
+
+    "@fortawesome/fontawesome-free": "^6.5.2",
+
+    "@tanstack/react-query": "^5.37.1",
+
+    "@tanstack/react-store": "^0.4.1",
+
+    "@testing-library/jest-dom": "^5.17.0",
+
+    "@testing-library/react": "^13.4.0",
+
+    "@testing-library/user-event": "^13.5.0",
+
+    "axios": "^1.6.8",
+
+    "bootstrap": "^5.3.3",
+
+    "cloudinary": "^2.2.0",
+
+    "hls.js": "^1.5.8",
+
+    "owl.carousel": "^2.3.4",
+
+    "react": "^18.3.1",
+
+    "react-bootstrap": "^2.10.2",
+
+    "react-dom": "^18.3.1",
+
+    "react-icons": "^5.2.1",
+
+    "react-lazy-load-image-component": "^1.6.0",
+
+    "react-owl-carousel": "^2.3.3",
+
+    "react-paginate": "^8.2.0",
+
+    "react-redux-toastr": "^8.0.0",
+
+    "react-scripts": "5.0.1",
+
+    "react-slick": "^0.30.2",
+
+    "toastr": "^2.1.4",
+
+    "web-vitals": "^2.1.4",
+
+    "webp-converter": "^2.3.3"
+
+  },
+
+  "scripts": {
+
+    "start": "react-scripts start",
+
+    "predeploy": "npm run build",
+
+    "deploy": "gh-pages -d build",
+
+    "build": "react-scripts build",
+
+    "test": "react-scripts test",
+
+    "eject": "react-scripts eject"
+
+  },
+
+  "eslintConfig": {
+
+    "extends": [
+
+      "react-app",
+
+      "react-app/jest"
+
+    ]
+
+  },
+
+  "browserslist": {
+
+    "production": [
+
+      ">0.2%",
+
+      "not dead",
+
+      "not op_mini all"
+
+    ],
+
+    "development": [
+
+      "last 1 chrome version",
+
+      "last 1 firefox version",
+
+      "last 1 safari version"
+
+    ]
+
+  },
+
+  "devDependencies": {
+
+    "gh-pages": "^6.1.1",
+
+    "react-router-dom": "^6.23.1"
+
+  }
+
+}
+

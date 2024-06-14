@@ -1,0 +1,730 @@
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+}
+
+.slideshow-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    z-index: 1;
+}
+
+.slideshow-container::after {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0.6) 30%,
+            rgba(0, 0, 0, 0.6) 50%,
+            rgb(0, 0, 0) 100%);
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.mySlides.active {
+    display: block;
+
+}
+
+
+.text {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: -600px;
+    /* bottom: 50%;
+    left:25%;
+    position: absolute; */
+}
+
+.text h1 {
+    color: #f2f2f2;
+    font-size: 3.5rem;
+    font-weight: 900;
+    font-family: "Poppins", sans-serif;
+    z-index: 5;
+    text-align: center;
+    padding: 5px;
+
+}
+
+.text p {
+    color: #f2f2f2;
+    font-size: 1.5rem;
+    margin: 20px;
+    font-weight: 400;
+    text-transform: capitalize;
+    z-index: 5;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+}
+
+.search {
+    display: flex;
+    /* margin-top:-500px ; */
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding: 20px 20%;
+   margin: 0 auto;
+   
+}
+
+.search input {
+    border:1px solid #8d8d8d !important;
+    position: relative;
+    z-index: 6;
+    width: 100%;
+    padding: 5px 20px;
+    border: none;
+    color: white ;
+    margin-right: 7px;
+    background-color: #0000008e;
+    border-radius: 7px;
+    font-size: 1rem;
+    height: 60px;
+    box-sizing: border-box;
+}
+.search input:focus{
+    border-color: rgb(129, 0, 0) !important;
+}
+
+.search button {
+    position: relative;
+    z-index: 6;
+    width: 190px;
+    padding: 0;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius:5px;
+    font-weight: bold;
+    background: red;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+.search button:hover{
+background-color: rgb(187, 0, 0);
+transition: .3s;
+}
+.search a {
+    z-index: 6;
+}
+
+@media (max-width: 1440px) and (min-width: 1025px) {
+   
+
+
+
+
+
+    .text {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        margin-top: -500px;
+    }
+
+    .text h1 {
+        color: #f2f2f2;
+        font-size: 80px;
+        font-weight: 600;
+        text-transform: capitalize;
+        z-index: 5;
+        font-family: "Inter", sans-serif;
+        text-align: center;
+        padding: 5px;
+
+    }
+
+    .text p {
+        color: #f2f2f2;
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: capitalize;
+        z-index: 5;
+        font-family: "Inter", sans-serif;
+        text-align: center;
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 85%;
+        padding: 50px 15%;
+    }
+
+   
+
+  
+
+    .search a {
+        z-index: 6;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .slideshow-container {
+        position: relative;
+        width: 100%;
+        height: 60vh;
+        margin: auto;
+
+
+    }
+
+    .slideshow-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-image: inherit;
+        background-size: inherit;
+        background-position: inherit;
+        z-index: 1;
+    }
+
+   
+
+    .mySlides {
+        display: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    .mySlides.active {
+        display: block;
+
+    }
+
+
+    .text {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        margin-top: -450px;
+    }
+
+    .text h1 {
+        color: #f2f2f2;
+        font-size: 80px;
+        font-weight: 600;
+        text-transform: capitalize;
+        z-index: 5;
+        font-family: "Inter", sans-serif;
+        text-align: center;
+        padding: 5px;
+
+    }
+
+    .text p {
+        color: #f2f2f2;
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: capitalize;
+        z-index: 5;
+        font-family: "Inter", sans-serif;
+        text-align: center;
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 40px 15%;
+    }
+
+    .search input {
+        width: 100%;
+        padding: 10px 40px;
+        border: none;
+        background-color: #fff;
+        border-radius: 20em 0 0 20em;
+        font-size: 26px;
+        height: 65px;
+        box-sizing: border-box;
+    }
+
+    .search button {
+        width: 220px;
+        padding: 0;
+        border: none;
+        color: #fff;
+        font-size: 26px;
+        border-radius: 0 20em 20em 0;
+        background: linear-gradient(98.37deg, #f89e00 .99%, #da2f68 100%);
+        height: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search a {
+        z-index: 6;
+    }
+}
+
+@media (max-width: 768px) {
+    .slideshow-container {
+        position: relative;
+        width: 100%;
+        height: 50vh;
+        margin: auto;
+
+
+    }
+
+    .slideshow-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-image: inherit;
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+    }
+
+ 
+
+    .mySlides {
+        display: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    .mySlides.active {
+        display: block;
+
+    }
+
+
+    .text {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        margin-top: -320px;
+        padding: 0px 20px;
+    }
+
+    .text h1 {
+        color: #f2f2f2;
+        font-size: 3.8rem;
+        font-weight: 600;
+        text-transform: capitalize;
+        z-index: 5;
+        font-family: "Inter", sans-serif;
+        text-align: center;
+        padding: 5px;
+
+    }
+
+    .text p {
+        color: #f2f2f2;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-transform: capitalize;
+        z-index: 5;
+        font-family: "Inter", sans-serif;
+        text-align: center;
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 30px 5%;
+    }
+
+    .search input {
+        width: 100%;
+        padding: 10px 30px;
+        border: none;
+        background-color: #fff;
+        border-radius: 20em 0 0 20em;
+        font-size: 23px;
+        height: 60px;
+        box-sizing: border-box;
+    }
+
+    .search button {
+        width: 200px;
+        padding: 0;
+        border: none;
+        color: #fff;
+        font-size: 23px;
+        border-radius: 0 20em 20em 0;
+        background: linear-gradient(98.37deg, #f89e00 .99%, #da2f68 100%);
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search a {
+        z-index: 6;
+    }
+}
+
+@media (max-width: 480px) {
+    .slideshow-container {
+        position: relative;
+        width: 100%;
+        height: 40vh;
+        margin: auto;
+
+
+    }
+
+    .slideshow-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-image: inherit;
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+    }
+
+   
+
+    .mySlides {
+        display: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    .mySlides.active {
+        display: block;
+
+    }
+
+
+    .text {
+        position: relative;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        margin-top: -230px;
+        padding: 0px 20px;
+    }
+
+    .text h1 {
+        color: #f2f2f2;
+        font-size: 2.4rem;
+        font-weight: 600;
+        text-transform: capitalize;
+        z-index: 5;
+        font-family: "Inter", sans-serif;
+        text-align: center;
+        padding: 5px;
+
+    }
+
+    .text p {
+        color: #f2f2f2;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-transform: capitalize;
+        z-index: 5;
+        font-family: "Inter", sans-serif;
+        text-align: center;
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 30px 8%;
+    }
+
+    .search input {
+        width: 100%;
+        padding: 10px 20px;
+        border: none;
+        background-color: #fff;
+        border-radius: 20em 0 0 20em;
+        font-size: 16px;
+        height: 40px;
+        box-sizing: border-box;
+    }
+
+    .search button {
+        width: 130px;
+        padding: 0;
+        border: none;
+        color: #fff;
+        font-size: 14px;
+        border-radius: 0 20em 20em 0;
+        background: linear-gradient(98.37deg, #f89e00 .99%, #da2f68 100%);
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search a {
+        z-index: 6;
+    }
+}
+
+@media (max-width: 400px) {
+    .slideshow-container {
+        position: relative;
+        width: 100%;
+        height: 40vh;
+        margin: auto;
+
+
+    }
+
+    .slideshow-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-image: inherit;
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+    }
+
+
+    .mySlides {
+        display: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    .mySlides.active {
+        display: block;
+
+    }
+
+
+    .text {
+        position: relative;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        margin-top: -190px;
+        padding: 0px 20px;
+    }
+
+    .text h1 {
+        color: #f2f2f2;
+        font-size: 2.4rem;
+        font-weight: 600;
+        text-transform: capitalize;
+        z-index: 5;
+        font-family: "Inter", sans-serif;
+        text-align: center;
+        padding: 5px;
+
+    }
+
+    .text p {
+        color: #f2f2f2;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-transform: capitalize;
+        z-index: 5;
+        font-family: "Inter", sans-serif;
+        text-align: center;
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 30px 8%;
+    }
+
+    .search input {
+        width: 100%;
+        padding: 10px 20px;
+        border: none;
+        background-color: #fff;
+        border-radius: 20em 0 0 20em;
+        font-size: 15px;
+        height: 40px;
+        box-sizing: border-box;
+    }
+
+    .search button {
+        width: 130px;
+        padding: 0;
+        border: none;
+        color: #fff;
+        font-size: 14px;
+        border-radius: 0 20em 20em 0;
+        background: linear-gradient(98.37deg, #f89e00 .99%, #da2f68 100%);
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search a {
+        z-index: 6;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .slideshow-container {
+        position: relative;
+        width: 100%;
+        height: 50vh;
+        margin: auto;
+
+
+    }
+
+
+    .mySlides {
+        display: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    .mySlides.active {
+        display: block;
+
+    }
+
+
+    .text {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        margin-top: -280px;
+        padding: 0px 20px;
+    }
+
+    .text h1 {
+        color: #f2f2f2;
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-transform: capitalize;
+        z-index: 5;
+        font-family: "Inter", sans-serif;
+        text-align: center;
+        padding: 5px;
+
+    }
+
+    .text p {
+        color: #f2f2f2;
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin: 0;
+        padding: 5px;
+        text-transform: capitalize;
+        z-index: 5;
+        font-family: "Inter", sans-serif;
+        text-align: center;
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 10px 5%;
+    }
+
+    .search input {
+        width: 100%;
+    
+        border-radius: 20em 0 0 20em;
+        height: 30px;
+     
+    }
+
+    .search input {
+        border:1px solid #8d8d8d !important;
+        position: relative;
+        z-index: 6;
+        
+        padding: 5px 20px;
+        border: none;
+        color: white ;
+        margin-right: 7px;
+        background-color: #0000008e;
+        border-radius: 7px;
+        font-size: 0.7rem;
+ 
+        box-sizing: border-box;
+    }
+    
+.search button {
+  width: 100px;
+    padding: 0;
+
+
+    font-size: 1rem;
+    border-radius:5px;
+    font-weight: bold;
+    background: red;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+.icon{
+    font-size: 15px;
+}
+    .search button {
+ 
+     
+
+        color: #fff;
+        font-size: 13px;
+  
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search a {
+        z-index: 6;
+    }
+}
