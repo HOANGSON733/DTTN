@@ -1,14 +1,22 @@
-/* eslint-disable jsx-a11y/alt-text */
-import React from 'react';
-import Loading from './5Q0v.gif';
-import './loading.css'
-
-const Load = () => {
-    return (
-        <div className='load'>
-            <img src={Loading}></img>
+import React from "react";
+import "./loading.css";
+const Loading = () => {
+  return (
+    <div>
+      <div class="loadingio-spinner-double-ring-2by998twmg8">
+        <div class="ldio-yzaezf3dcmj">
+          <div></div>
+          <div></div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
-export default Load;
+export default Loading;

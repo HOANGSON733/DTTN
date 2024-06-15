@@ -96,7 +96,7 @@ const Navbar = () => {
             <div className='navbar_container'>
                 <div className={`navbar ${menuOpen ? 'active' : ''}`}>
                     <div className='logo'>
-                        <Link style={menu === "trang_chu" ? { borderBottom: "none" } : {}} onClick={() => handleClick('trang_chu')} to={'/Movix'}>
+                        <Link style={menu === "trang_chu" ? { color: "none" } : {}} onClick={() => handleClick('trang_chu')} to={'/Movix'}>
                             <img
                                 className="logo"
                                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
@@ -110,14 +110,13 @@ const Navbar = () => {
                     <div className={`bar ${menuOpen ? 'active' : ''}`}>
                         <ul>
                             <li><Link style={menu === "trang_chu" ? { borderBottom: "none" } : {}} onClick={() => handleClick('trang_chu')} to='/Movix'>Trang Chủ</Link></li>
-                            <li><Link style={menu === "phim_moi_cap_nhat" ? { borderBottom: "3px solid rgb(139 92 246 )" } : {}} onClick={() => handleClick('phim_moi_cap_nhat')} to='/movie/phim_moi_cap_nhat'>Tất Cả Phim</Link></li>
-                            <li><Link style={menu === "phim_le" ? { borderBottom: "3px solid rgb(139 92 246 )" } : {}} onClick={() => handleClick('phim_le')} to='/movie/phim_le'>Phim Lẻ</Link></li>
-                            <li><Link style={menu === "phim_bo" ? { borderBottom: "3px solid rgb(139 92 246 )" } : {}} onClick={() => handleClick('phim_bo')} to='/movie/phim_bo'>Phim Bộ</Link></li>
-                            <li><Link style={menu === "tvshow" ? { borderBottom: "3px solid rgb(139 92 246 )" } : {}} onClick={() => handleClick('tvshow')} to='/movie/tvshow'>Tv Show</Link></li>
-                            <li><Link style={menu === "phim_hoat_hinh" ? { borderBottom: "3px solid rgb(139 92 246 )" } : {}} onClick={() => handleClick('phim_hoat_hinh')} to='/movie/phim_hoat_hinh'>
+                            <li><Link style={menu === "phim_le" ? { color: "red" } : {}} onClick={() => handleClick('phim_le')} to='/movie/phim_le'>Phim Lẻ</Link></li>
+                            <li><Link style={menu === "phim_bo" ? { color: "red" } : {}} onClick={() => handleClick('phim_bo')} to='/movie/phim_bo'>Phim Bộ</Link></li>
+                            <li><Link style={menu === "tvshow" ? { color: "red" } : {}} onClick={() => handleClick('tvshow')} to='/movie/tvshow'>Tv Show</Link></li>
+                            <li><Link style={menu === "phim_hoat_hinh" ? { color: "red" } : {}} onClick={() => handleClick('phim_hoat_hinh')} to='/movie/phim_hoat_hinh'>
                                 Phim Hoạt Hình</Link></li>
                             <li className='dropdown' ref={dropdownRef}>
-                                <Link style={menu === "genres" ? { borderBottom: "3px solid rgb(139 92 246 )" } : {}} onClick={() => handleDropdownToggle('genres')}>
+                                <Link style={menu === "genres" ? { color: "red" } : {}} onClick={() => handleDropdownToggle('genres')}>
                                     Thể Loại <i className="fa-solid fa-caret-down"></i>
                                 </Link>
                                 <div className={`dropdown_content ${dropdownOpen ? 'active' : ''}`}>
@@ -128,7 +127,7 @@ const Navbar = () => {
                                     </div>
                                 </div>
                             </li>
-                            <li><Link style={menu === "list_favourite_movie" ? { borderBottom: "3px solid rgb(139 92 246 )" } : {}} onClick={() => handleClick('list_favourite_movie')} to="/movie/list_favourite_movie">Yêu Thích</Link></li>
+                            <li><Link style={menu === "list_favourite_movie" ? { color: "red" } : {}} onClick={() => handleClick('list_favourite_movie')} to="/movie/list_favourite_movie">Yêu Thích</Link></li>
                             <li className='find' onClick={handleShowModal} style={{ color: "#fff", cursor: "pointer" }}><i className="fa-solid fa-magnifying-glass"></i></li>
                         </ul>
                     </div>

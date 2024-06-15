@@ -23,7 +23,7 @@
 }
 
 .search_component .movie img {
-    border-radius: 20px;
+    border-radius: 10px;
     height: 320px;
     z-index: 1;
     position: relative;

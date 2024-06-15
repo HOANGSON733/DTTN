@@ -48,7 +48,7 @@
 }
 
 .show_series .movie img {
-    border-radius: 20px;
+    border-radius: 0px;
     height: 320px;
     width: 100%;
     z-index: 1;
