@@ -1,18 +1,18 @@
 .filter_form {
     display: flex;
     gap: 20px;
-    background-color: #04152d;
+    background-color: #000000;
     padding: 15px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
 }
 
 .filter_form select {
-    border: 1px solid rgb(139 92 246);
+    border: 1px solid rgb(160, 160, 160);
     /* padding: 10px 20px; */
     height: 40px;
-    width: 170px;
-    background-color: rgba(4, 21, 45);
+    width: 100px;
+    background-color: rgb(0, 0, 0);
     color: #fff;
     border-radius: 5px;
     font-family: "Inter", sans-serif;
@@ -32,13 +32,13 @@
 }
 
 .filter_form button {
-    border: 1px solid rgb(139 92 246);
+    border: 1px solid rgb(184, 184, 184);
     color: #fff;
     border-radius: 5px;
-    padding: 0 40px;
-    width: 170px;
+    padding: 0 20px;
+    width: 100px;
     height: 40px;
-    background-color: #04152d;
+    background-color: #000000;
 
 }
 

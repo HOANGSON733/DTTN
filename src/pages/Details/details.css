@@ -189,7 +189,7 @@ body {
     width: 120px;
     height: 45px;
     /* padding: 10px 25px; */
-    background: linear-gradient(98.37deg, #359000 .99%, #f89e00 100%);
+    background: red;
     border-radius: 10px;
     color: #fff;
     font-weight: 600;
@@ -200,14 +200,14 @@ body {
 }
 
 .watch .trailer button:hover {
-    background: linear-gradient(98.37deg, #f89e00 .99%, #da2f68 100%);
+    background: red;
 }
 
 .watch .watch_now button {
     width: 120px;
     height: 45px;
     /* padding: 10px 25px; */
-    background: linear-gradient(98.37deg, #f89e00 .99%, #da2f68 100%);
+    background: red;
     border-radius: 10px;
     color: #fff;
     font-weight: 600;

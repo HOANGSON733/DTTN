@@ -115,13 +115,13 @@ const DetailsMovie = () => {
                                                 ""
                                             ) : (
                                                 <div className='trailer' onClick={handleShowModal}>
-                                                    <button>Trailer <i className="fa-brands fa-youtube fa-beat-fade"></i></button>
+                                                    <button>Trailer <i className="fa-brands fa-youtube"></i></button>
                                                 </div>
                                             )}
                                             {episodes.length > 0 ? (
                                                 <div className='watch_now'>
                                                     <Link to={`/movie/detailsmovie/watch/${details.slug}`}>
-                                                        <button>Xem Phim <i className="fa-solid fa-play fa-shake"></i></button>
+                                                        <button>Xem Phim <i className="fa-solid fa-play "></i></button>
                                                     </Link>
                                                 </div>
                                             ) : (

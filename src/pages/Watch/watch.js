@@ -74,6 +74,7 @@ const DetailsMovie = () => {
                         </video>
                     </div>
                     <div className='episodes'>
+                        <h1 className='Name'>{details.name}</h1>
                         <div className='title'>
                             <h5>Danh sách phim</h5>
                         </div>

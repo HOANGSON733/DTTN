@@ -1,12 +1,12 @@
 .film_component {
 
     padding: 100px 10% 50px 10%;
-    background-color: #04152d;
+    background-color: #000000;
 }
 
 .film_component .list {
     display: grid;
-    grid-template-columns: repeat(5, 20%);
+    grid-template-columns: repeat(6, 1fr);
     /* gap: 1px; */
 }
 
@@ -27,7 +27,7 @@
 
 .film_component .movie img {
     width: 320px;
-    border-radius: 10px;
+    border-radius: 0px;
     height: 300px;
     z-index: 1;
     position: relative;
@@ -96,14 +96,15 @@
     width: 40px;
     height: 40px;
     margin: 20px 5px;
-    border: 1px solid rgb(139 92 246);
-    color: rgb(139 92 246);
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    border-radius: 1px;
 }
 
 .page button:hover {
-    border: 1px solid rgb(139 92 246);
-    color: #fff;
-    background-color: rgb(139, 92, 246, 0.6);
+    border: 1px solid rgb(255, 255, 255);
+    color: #ffffff;
+    background-color: rgb(255, 0, 0);
     transition: 0.4s
 }
 
@@ -299,17 +300,7 @@
         position: relative;
     }
 
-    .film_component .movie .year {
-        background-color: #fff;
-        width: 55px;
-        height: 55px;
-        display: grid;
-        align-items: center;
-        margin-top: -25px;
-        z-index: 2;
-        border-radius: 50%;
-        position: relative;
-    }
+    
 
     .film_component .movie .year p {
         margin: auto;
@@ -696,8 +687,8 @@
         width: 30px;
         height: 30px;
         margin: 20px 5px;
-        border: 1px solid rgb(139 92 246);
-        color: rgb(139 92 246);
+        border: 1px solid rgb(255, 0, 0);
+        color: rgb(255, 0, 0);
     }
 
     .page button:hover {

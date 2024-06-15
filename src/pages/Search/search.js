@@ -64,7 +64,7 @@ const Search = () => {
                         <Filterform />
                         {timkiem.length > 0 && (
                             <div >
-                                <div className='category' style={{ color: "#f89e00" }}>#{titlePage} | <span style={{ color: "rgb(139 92 246)" }}>{timkiem.length} Kết quả </span></div>
+                                <div className='category' >{titlePage} | <span style={{ color: "red" }}>{timkiem.length} Kết quả </span></div>
                             </div>
                         )}
                         <div className='list'>
@@ -75,7 +75,7 @@ const Search = () => {
                                             <LazyLoadImage
                                                 src={`https://img.phimapi.com/${movie.poster_url}`}
                                                 alt={movie.title}
-                                                placeholderSrc='https://movix-taupe.vercel.app/assets/movix-logo-d720c325.svg'
+                                                placeholderSrc='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEN3UB3h1qrRON7O1XZxgqETeyN5OlV8_wsg&s'
                                             />
                                             <div className="image-overlay">
                                                 <p>{movie.name}</p>
@@ -83,9 +83,7 @@ const Search = () => {
                                         </div>
                                     </Link>
                                     <div className='favourite'>
-                                        <div className='year'>
-                                            <p>{movie.year}</p>
-                                        </div>
+                                        
                                         {favourite.includes(movie.slug) ? (
                                             <i
                                                 style={{ color: "#f89e00" }}
@@ -132,7 +130,8 @@ const Search = () => {
                     </div>
                 )
             ) : (
-                <Loading />
+                <div className='loading'><Loading /></div>
+                
             )}
         </div>
     );

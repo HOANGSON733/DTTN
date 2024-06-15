@@ -95,9 +95,7 @@ const FilterMovie = () => {
                                         </div>
                                     </Link>
                                     <div className='favourite'>
-                                        <div className='year'>
-                                            <p>{movie.year}</p>
-                                        </div>
+                                      
                                         {favourite.includes(movie.slug) ? (
                                             <i
                                                 style={{ color: "#f89e00" }}

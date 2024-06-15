@@ -60,7 +60,7 @@ const SeriesMovie = () => {
             {phimCapNhat ? (
                 <div className='film_component'>
                     <FilterForm></FilterForm>
-                    <div className='category' style={{ color: "#f89e00" }}>#Phim mới cập nhật</div>
+                    <div className='category' style={{ color: "#f89e00" }}>Phim mới cập nhật</div>
                     <div className="list">
                         {phimCapNhat && phimCapNhat.map(movie => (
                             <div key={movie.id} className="movie">
@@ -77,9 +77,7 @@ const SeriesMovie = () => {
                                     </div>
                                 </Link>
                                 <div className='favourite'>
-                                    <div className='year'>
-                                        <p>{movie.year}</p>
-                                    </div>
+                                    
                                     {favourite.includes(movie.slug) ? (
                                         <i
                                             style={{ color: "#f89e00" }}

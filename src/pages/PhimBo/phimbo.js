@@ -49,7 +49,7 @@ const SeriesMovie = () => {
             {phimBo ? (
                 <div className='film_component'>
                     <Filterform />
-                    <div className='category' style={{ color: "#f89e00" }}>#Phim Bộ</div>
+                    <div className='category'>Phim Bộ</div>
                     <div className="list">
                         {phimBo.map(movie => (
                             <div key={movie.id} className="movie">
@@ -65,9 +65,7 @@ const SeriesMovie = () => {
                                     </div>
                                 </Link>
                                 <div className='favourite'>
-                                    <div className='year'>
-                                        <p>{movie.year}</p>
-                                    </div>
+                                    
                                     {favourite.includes(movie.slug) ? (
                                         <i
                                             style={{ color: "#f89e00" }}
@@ -98,7 +96,7 @@ const SeriesMovie = () => {
                             <button hidden={pagination.currentPage <= 1} onClick={() => handleClick(pagination.currentPage - 1)}>
                                 {pagination.currentPage - 1}
                             </button>
-                            <button style={{ backgroundColor: 'rgb(139 92 246)', color: "#fff" }}>
+                            <button style={{ backgroundColor: 'red', color: "#fff" }}>
                                 {pagination.currentPage}
                             </button>
                             <button hidden={pagination.currentPage >= pagination.totalPages} onClick={() => handleClick(pagination.currentPage + 1)}>

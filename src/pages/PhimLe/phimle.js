@@ -60,7 +60,7 @@ const SeriesMovie = () => {
             {phimle ? (
                 <div className='film_component'>
                     <Filterform />
-                    <div className='category' style={{ color: "#f89e00" }}>#Phim Lẻ</div>
+                    <div className='category'>Phim Lẻ</div>
                     <div className="list">
                         {phimle && phimle.map(movie => (
                             <div key={movie.id} className="movie">
@@ -102,7 +102,7 @@ const SeriesMovie = () => {
                             <button hidden={pagination.currentPage <= 1} onClick={() => handleClick(pagination.currentPage - 1)}><i class="fa-sharp fa-solid fa-arrow-left"></i></button>
                             <button hidden={pagination.currentPage <= 2} onClick={() => handleClick(pagination.currentPage - 2)}>{pagination.currentPage - 2}</button>
                             <button hidden={pagination.currentPage <= 1} onClick={() => handleClick(pagination.currentPage - 1)}>{pagination.currentPage - 1}</button>
-                            <button style={{ backgroundColor: 'rgb(139 92 246 )', color: "#fff" }}>{pagination.currentPage}</button>
+                            <button style={{ backgroundColor: 'red', color: "#fff" }}>{pagination.currentPage}</button>
                             <button hidden={pagination.currentPage >= pagination.totalPages} onClick={() => handleClick(pagination.currentPage + 1)}>{pagination.currentPage + 1}</button>
                             <button hidden={pagination.currentPage >= pagination.totalPages} onClick={() => handleClick(pagination.currentPage + 2)}>{pagination.currentPage + 2}</button>
                             <button onClick={() => handleClick(pagination.currentPage + 1)}><i class="fa-sharp fa-solid fa-arrow-right"></i></button>

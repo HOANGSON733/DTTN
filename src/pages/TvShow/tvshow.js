@@ -71,15 +71,11 @@ const SeriesMovie = () => {
                                                 alt={movie.title}
                                                 placeholderSrc='https://movix-taupe.vercel.app/assets/movix-logo-d720c325.svg'
                                             />
-                                            <div className="image-overlay">
-                                                <p>{movie.name}</p>
-                                            </div>
+                                          
                                         </div>
                                     </Link>
                                     <div className='favourite'>
-                                        <div className='year'>
-                                            <p>{movie.year}</p>
-                                        </div>
+                                     
                                         {favourite.includes(movie.slug) ? (
                                             <i
                                                 style={{ color: "#f89e00" }}
