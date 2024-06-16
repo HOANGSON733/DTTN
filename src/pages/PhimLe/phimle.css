@@ -269,7 +269,7 @@
 @media (max-width: 1300px) and (min-width: 961px) {
     .film_component {
         padding: 100px 12% 50px 12%;
-        background-color: #04152d;
+     
     }
 
     .film_component .list {
@@ -368,11 +368,7 @@
 }
 
 @media (max-width: 960px) and (min-width: 769px) {
-    .film_component {
-        padding: 100px 10% 50px 10%;
-        background-color: #04152d;
-    }
-
+   
     .film_component .list {
         display: grid;
         grid-template-columns: repeat(3, 33%);
@@ -480,10 +476,7 @@
 }
 
 @media (max-width: 768px) and (min-width: 481px) {
-    .film_component {
-        padding: 100px 10% 50px 10%;
-        background-color: #04152d;
-    }
+   
 
     .film_component .list {
         display: grid;
@@ -599,7 +592,7 @@
 
     .film_component {
         padding: 100px 5% 50px 5%;
-        background-color: #04152d;
+      
     }
 
     .film_component .list {

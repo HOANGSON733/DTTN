@@ -40,9 +40,9 @@ body {
     width: 100%;
     z-index: 2;
     background: linear-gradient(to bottom,
-            rgba(4, 21, 45, 0.8) 0%,
-            rgba(4, 21, 45, 0.8) 50%,
-            rgba(4, 21, 45, 1) 100%);
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0.8) 50%,
+            rgb(0, 0, 0) 100%);
 }
 
 .content>* {
@@ -57,7 +57,7 @@ body {
     width: 340px;
     height: 500px;
 
-    border-radius: 10px;
+    border-radius: 4px;
 }
 
 .content_item1 h5 {
@@ -82,7 +82,7 @@ body {
     background-color: #da2f68;
     color: #fff;
     margin: 0 5px 0 0;
-    border-radius: 5px;
+    border-radius: 4px;
     /* display: inline; */
 
 }
@@ -147,9 +147,9 @@ body {
 }
 
 .watch {
-    padding: 50px 20px 10px 20px;
+    padding: 40px 0px 10px 0px;
     display: flex;
-    gap: 50px;
+    gap: 20px;
 }
 
 
@@ -190,17 +190,19 @@ body {
     height: 45px;
     /* padding: 10px 25px; */
     background: red;
-    border-radius: 10px;
+    border-radius: 4px;
     color: #fff;
     font-weight: 600;
     border: none;
     cursor: pointer;
     line-height: 20px;
     font-size: 17px;
+    transition: .3s;
 }
 
 .watch .trailer button:hover {
-    background: red;
+    background: rgb(151, 0, 0);
+    transition: .3s;
 }
 
 .watch .watch_now button {
@@ -208,21 +210,23 @@ body {
     height: 45px;
     /* padding: 10px 25px; */
     background: red;
-    border-radius: 10px;
+    border-radius: 4px;
     color: #fff;
     font-weight: 600;
     border: none;
     cursor: pointer;
     line-height: 20px;
     font-size: 17px;
+    transition: .3s;
 }
 
 .watch .watch_now button:hover {
-    background: linear-gradient(98.37deg, #359000 .99%, #f89e00 100%);
+    background: rgb(151, 0, 0);
+    transition: .3s;
 }
 
 .comment_container {
-    background-color: #04152d;
+    background-color: #000000;
     justify-content: center;
     display: flex;
     padding: 10px;
@@ -230,8 +234,9 @@ body {
 
 .fb-comments {
     background-color: #fff;
-    border-radius: 10px;
-    padding: 10px 5%;
+   
+    border-radius: 4px;   
+     padding: 10px 5%;
 }
 
 
@@ -248,7 +253,7 @@ body {
 @media (max-width: 1440px) and (min-width: 1025px) {
     .content {
         background-size: cover;
-        padding: 100px 10% 20px 10%;
+        /* padding: 100px 10% 20px 10%; */
         position: relative;
         height: auto;
         width: 100%;
@@ -281,10 +286,7 @@ body {
         height: 100%;
         width: 100%;
         z-index: 2;
-        background: linear-gradient(to bottom,
-                rgba(4, 21, 45, 0.8) 0%,
-                rgba(4, 21, 45, 0.8) 50%,
-                rgba(4, 21, 45, 1) 100%);
+       
     }
 
     .content>* {
@@ -295,12 +297,7 @@ body {
         /* Ensures text is readable over the dark overlay */
     }
 
-    .content_item img {
-        width: 100%;
-        height: auto;
-
-        border-radius: 10px;
-    }
+   
 
     .content_item1 h5 {
         font-family: "Inter", sans-serif;
@@ -324,7 +321,7 @@ body {
         background-color: #da2f68;
         color: #fff;
         margin: 0 5px 0 0;
-        border-radius: 5px;
+        border-radius: 4px;
     }
 
     .content_item1 iframe {
@@ -379,78 +376,14 @@ body {
         line-height: 18px;
     }
 
-    .watch {
-        padding: 50px 20px 10px 20px;
-        display: flex;
-        gap: 50px;
-    }
+   
 
 
-    .watch .quality {
-        background-color: #253d60;
-        width: 90px;
-        height: 90px;
-        display: grid;
-        align-items: center;
-        margin-top: -25px;
-        z-index: 2;
-        border-radius: 50%;
-        position: relative;
-    }
 
-    .watch .quality h3 {
-        margin: auto;
-        width: 80px;
-        height: 80px;
-        border: 8px solid rgb(76, 187, 23);
-        border-radius: 50%;
-        align-items: center;
-        display: grid;
-        text-align: center;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 13px;
-        font-weight: 500;
-        color: #f89e00;
-        font-style: none;
-        font-weight: 800;
 
-    }
+    
 
-    .watch .trailer button {
-        width: 120px;
-        height: 45px;
-        /* padding: 10px 25px; */
-        background: linear-gradient(98.37deg, #359000 .99%, #f89e00 100%);
-        border-radius: 10px;
-        color: #fff;
-        font-weight: 600;
-        border: none;
-        cursor: pointer;
-        line-height: 20px;
-        font-size: 17px;
-    }
-
-    .watch .trailer button:hover {
-        background: linear-gradient(98.37deg, #f89e00 .99%, #da2f68 100%);
-    }
-
-    .watch .watch_now button {
-        width: 120px;
-        height: 45px;
-        /* padding: 10px 25px; */
-        background: linear-gradient(98.37deg, #f89e00 .99%, #da2f68 100%);
-        border-radius: 10px;
-        color: #fff;
-        font-weight: 600;
-        border: none;
-        cursor: pointer;
-        line-height: 20px;
-        font-size: 17px;
-    }
-
-    .watch .watch_now button:hover {
-        background: linear-gradient(98.37deg, #359000 .99%, #f89e00 100%);
-    }
+   
 }
 
 @media (max-width: 1024px) and (min-width: 601px) {
@@ -488,10 +421,7 @@ body {
         height: 100%;
         width: 100%;
         z-index: 2;
-        background: linear-gradient(to bottom,
-                rgba(4, 21, 45, 0.8) 0%,
-                rgba(4, 21, 45, 0.8) 50%,
-                rgba(4, 21, 45, 1) 100%);
+       
     }
 
     .content>* {
@@ -502,11 +432,7 @@ body {
         /* Ensures text is readable over the dark overlay */
     }
 
-    .content_item img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-    }
+    
 
     .content_item1 h5 {
         font-family: "Inter", sans-serif;
@@ -523,16 +449,7 @@ body {
         font-style: italic;
     }
 
-    .content_item1 span {
-        font-family: "Inter", sans-serif;
-        padding: 1px 5px;
-        font-size: 10px;
-        background-color: #da2f68;
-        color: #fff;
-        margin: 0 5px 0 0;
-        border-radius: 5px;
-    }
-
+    
     .content_item1 iframe {
         margin: 10px 0;
         z-index: 4;
@@ -595,70 +512,7 @@ body {
 
     }
 
-    .watch .quality {
-        background-color: #253d60;
-        width: 70px;
-        height: 70px;
-        display: grid;
-        align-items: center;
-        z-index: 2;
-        border-radius: 50%;
-        position: relative;
-        margin-top: auto;
-
-    }
-
-    .watch .quality h3 {
-        margin: auto;
-        width: 60px;
-        height: 60px;
-        border: 6px solid rgb(76, 187, 23);
-        border-radius: 50%;
-        align-items: center;
-        display: grid;
-        text-align: center;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 10px;
-        font-weight: 500;
-        color: #f89e00;
-        font-style: none;
-        font-weight: 800;
-    }
-
-    .watch .trailer button {
-        width: 100px;
-        height: 40px;
-        background: linear-gradient(98.37deg, #359000 .99%, #f89e00 100%);
-        border-radius: 10px;
-        color: #fff;
-        font-weight: 600;
-        border: none;
-        cursor: pointer;
-        line-height: 20px;
-        font-size: 14px;
-    }
-
-    .watch .trailer button:hover {
-        background: linear-gradient(98.37deg, #f89e00 .99%, #da2f68 100%);
-    }
-
-    .watch .watch_now button {
-        width: 100px;
-        height: 40px;
-        /* padding: 10px 25px; */
-        background: linear-gradient(98.37deg, #f89e00 .99%, #da2f68 100%);
-        border-radius: 10px;
-        color: #fff;
-        font-weight: 600;
-        border: none;
-        cursor: pointer;
-        line-height: 20px;
-        font-size: 13px;
-    }
-
-    .watch .watch_now button:hover {
-        background: linear-gradient(98.37deg, #359000 .99%, #f89e00 100%);
-    }
+    
 }
 
 @media (max-width: 600px) and (min-width: 481px) {
@@ -696,10 +550,7 @@ body {
         height: 100%;
         width: 100%;
         z-index: 2;
-        background: linear-gradient(to bottom,
-                rgba(4, 21, 45, 0.8) 0%,
-                rgba(4, 21, 45, 0.8) 50%,
-                rgba(4, 21, 45, 1) 100%);
+       
     }
 
     .content>* {
@@ -731,16 +582,6 @@ body {
         font-style: italic;
     }
 
-    .content_item1 span {
-        font-family: "Inter", sans-serif;
-        padding: 1px 5px;
-        font-size: 10px;
-        background-color: #da2f68;
-        color: #fff;
-        margin: 0 5px 0 0;
-        border-radius: 5px;
-        font-size: 10px;
-    }
 
     .content_item1 iframe {
         margin: 10px 0;
@@ -803,70 +644,6 @@ body {
 
     }
 
-    .watch .quality {
-        background-color: #253d60;
-        width: 70px;
-        height: 70px;
-        display: grid;
-        align-items: center;
-        z-index: 2;
-        border-radius: 50%;
-        position: relative;
-        margin-top: auto;
-
-    }
-
-    .watch .quality h3 {
-        margin: auto;
-        width: 60px;
-        height: 60px;
-        border: 6px solid rgb(76, 187, 23);
-        border-radius: 50%;
-        align-items: center;
-        display: grid;
-        text-align: center;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 10px;
-        font-weight: 500;
-        color: #f89e00;
-        font-style: none;
-        font-weight: 800;
-    }
-
-    .watch .trailer button {
-        width: 100px;
-        height: 40px;
-        background: linear-gradient(98.37deg, #359000 .99%, #f89e00 100%);
-        border-radius: 10px;
-        color: #fff;
-        font-weight: 600;
-        border: none;
-        cursor: pointer;
-        line-height: 20px;
-        font-size: 14px;
-    }
-
-    .watch .trailer button:hover {
-        background: linear-gradient(98.37deg, #f89e00 .99%, #da2f68 100%);
-    }
-
-    .watch .watch_now button {
-        width: 100px;
-        height: 40px;
-        /* padding: 10px 25px; */
-        background: linear-gradient(98.37deg, #f89e00 .99%, #da2f68 100%);
-        border-radius: 10px;
-        color: #fff;
-        font-weight: 600;
-        border: none;
-        cursor: pointer;
-        line-height: 20px;
-        font-size: 13px;
-    }
-
-    .watch .watch_now button:hover {
-        background: linear-gradient(98.37deg, #359000 .99%, #f89e00 100%);
-    }
 }
 
 @media (max-width: 480px) and (min-width: 320px) {
@@ -904,10 +681,7 @@ body {
         height: 100%;
         width: 100%;
         z-index: 2;
-        background: linear-gradient(to bottom,
-                rgba(4, 21, 45, 0.8) 0%,
-                rgba(4, 21, 45, 0.8) 50%,
-                rgba(4, 21, 45, 1) 100%);
+       
     }
 
     .content>* {
@@ -916,11 +690,6 @@ body {
         color: white;
     }
 
-    .content_item img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-    }
 
     .content_item1 h5 {
         font-family: "Inter", sans-serif;
@@ -938,15 +707,6 @@ body {
         font-style: italic;
     }
 
-    .content_item1 span {
-        font-family: "Inter", sans-serif;
-        padding: 1px 5px;
-        font-size: 12px;
-        background-color: #da2f68;
-        color: #fff;
-        margin: 0 5px 0 0;
-        border-radius: 5px;
-    }
 
     .trailer_container {
         display: flex;
@@ -989,12 +749,44 @@ body {
 
     .info .info_item h5 {
         display: flex;
-        border-bottom: 1px solid #253d60;
+        border-bottom: 1px solid #000000;
         padding: 10px 0;
         align-items: center;
     }
-
-
+    .content_item img {
+        width: 100%;
+        height: 400px;
+        border-radius: 14px;
+        padding: 0 30px;
+    }
+    .watch .trailer button {
+        width: 90px;
+        height: 37px;
+        /* padding: 10px 25px; */
+        background: red;
+        border-radius: 4px;
+        color: #fff;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        line-height: 20px;
+        font-size: 13px;
+        transition: .3s;
+    }
+    .watch .watch_now button {
+        width: 90px;
+        height: 37px;
+        /* padding: 10px 25px; */
+        background: red;
+        border-radius: 4px;
+        color: #fff;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        line-height: 20px;
+        font-size: 13px;
+        transition: .3s;
+    }
     .info .info_item h5 {
         font-family: "Inter", sans-serif;
         font-size: 14px;
@@ -1021,69 +813,7 @@ body {
 
     }
 
-    .watch .quality {
-        background-color: #253d60;
-        width: 60px;
-        height: 60px;
-        display: grid;
-        align-items: center;
-        z-index: 2;
-        border-radius: 50%;
-        position: relative;
-        margin-top: auto;
-
-    }
-
-    .watch .quality h3 {
-        margin: auto;
-        width: 55px;
-        height: 55px;
-        border: 6px solid rgb(76, 187, 23);
-        border-radius: 50%;
-        align-items: center;
-        display: grid;
-        text-align: center;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 9px;
-        font-weight: 500;
-        color: #f89e00;
-        font-style: none;
-        font-weight: 800;
-    }
-
-    .watch .trailer button {
-        width: 100px;
-        height: 40px;
-        background: linear-gradient(98.37deg, #359000 .99%, #f89e00 100%);
-        border-radius: 10px;
-        color: #fff;
-        font-weight: 600;
-        border: none;
-        cursor: pointer;
-        line-height: 20px;
-        font-size: 14px;
-    }
-
-    .watch .trailer button:hover {
-        background: linear-gradient(98.37deg, #f89e00 .99%, #da2f68 100%);
-    }
-
-    .watch .watch_now button {
-        width: 100px;
-        height: 40px;
-        background: linear-gradient(98.37deg, #f89e00 .99%, #da2f68 100%);
-        border-radius: 10px;
-        color: #fff;
-        font-weight: 600;
-        border: none;
-        cursor: pointer;
-        line-height: 20px;
-        font-size: 14px;
-    }
-
-    .watch .watch_now button:hover {
-        background: linear-gradient(98.37deg, #359000 .99%, #f89e00 100%);
-    }
+    
 
     .comment_container {
         padding: 10px 0;

@@ -52,7 +52,7 @@
 }
 
 .modal_search {
-    padding: 20px 100vw;
+    padding: 20px 60px;
     background-color: #fff;
     display: flex;
     gap: 20px;
@@ -81,7 +81,7 @@
 .dropdown_content {
     display: none;
     position: fixed;
-    background-color: #020c1b;
+    background-color: #000000;
     min-width: 200px;
     z-index: 1;
     right: 0;
@@ -128,7 +128,7 @@
     }
 
     .navbar {
-        padding: 13px 3%;
+        padding: 13px 9%;
         display: flex;
         align-items: center;
         justify-content: space-between;

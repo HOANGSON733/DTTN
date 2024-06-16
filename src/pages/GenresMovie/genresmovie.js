@@ -71,15 +71,15 @@ const GenresMovie = () => {
     return (
         <div>
             {loading ? (
-                <Loading />
+                <Loading className="loading"/>
             ) : (
                 <div className='film_component'>
                     <Filterform />
                     <div className='category'>
                         {genres.map(genre => (
                             genre.slug === slug && (
-                                <div key={genre.slug} style={{ color: "#f89e00" }}>
-                                    #{genre.name} | <span style={{ color: "rgb(139 92 246)", fontSize: "20px" }}>{filteredMovies.length} Kết quả</span>
+                                <div key={genre.slug} >
+                                    {genre.name} | <span style={{ color: "red", fontSize: "20px" }}>{filteredMovies.length} Kết quả</span>
                                 </div>
                             )
                         ))}
@@ -93,7 +93,7 @@ const GenresMovie = () => {
                                         <LazyLoadImage
                                             src={`https://img.phimapi.com/${movie.poster_url}`}
                                             alt={movie.title}
-                                            placeholderSrc='https://movix-taupe.vercel.app/assets/movix-logo-d720c325.svg'
+                                            placeholderSrc='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEN3UB3h1qrRON7O1XZxgqETeyN5OlV8_wsg&s'
                                         />
                                         <div className="image-overlay">
                                             <p>{movie.name}</p>

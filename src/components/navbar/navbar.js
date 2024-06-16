@@ -88,7 +88,7 @@ const Navbar = () => {
         setMenuGenres(cate);
     };
 
-    localStorage.setItem("logo", "https://movix-taupe.vercel.app/assets/movix-logo-d720c325.svg")
+    localStorage.setItem("logo", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEN3UB3h1qrRON7O1XZxgqETeyN5OlV8_wsg&s")
     const logo = localStorage.getItem("logo");
 
     return (

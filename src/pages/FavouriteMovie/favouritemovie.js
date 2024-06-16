@@ -73,10 +73,10 @@ const ListFavourite = () => {
                 <div className="film_component">
                     <Filterform />
                     <div style={{ justifyContent: "space-between", display: "flex" }}>
-                        <div className='category' style={{ color: "#f89e00" }}>
-                            #Phim Yêu Thích | <span style={{ color: "rgb(139 92 246)" }}>{filteredMovies.length} Kết quả </span>
+                        <div className='category' >
+                            Phim Yêu Thích | <span style={{ color: 'red' }}>{filteredMovies.length} Kết quả </span>
                         </div>
-                        <i onClick={() => handleRemoveAllFavourite()} style={{ color: "#f89e00", display: "flex", cursor: "pointer", gap: "3px", fontSize: '1.3rem', alignItems: "center" }} class="fa-regular fa-trash-can"><h5 style={{ fontFamily: '"Inter", sans-serif' }}>Clear</h5></i>
+                        <i onClick={() => handleRemoveAllFavourite()} style={{ color: "red", display: "flex", cursor: "pointer", gap: "3px", fontSize: '1.3rem', alignItems: "center" }} class="fa-regular fa-trash-can"><h5 style={{ fontFamily: '"Inter", sans-serif' }}>Clear</h5></i>
                     </div>
                     <div className='list'>
                         {currentPageData.map(movie => (
@@ -96,7 +96,7 @@ const ListFavourite = () => {
                                 <div className='favourite'>
                                   
                                     <button onClick={() => handleRemoveFavourite(movie.slug)} className="remove-button">
-                                        <i style={{ color: "#f89e00" }} class="fa-solid fa-trash-can"></i>
+                                        <i style={{ color: "red" }} class="fa-solid fa-trash-can"></i>
                                     </button>
                                 </div>
                                 <div className='title'>

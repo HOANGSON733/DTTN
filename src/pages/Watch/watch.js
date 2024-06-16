@@ -9,6 +9,11 @@ const DetailsMovie = () => {
     const { slug } = useParams();
     const [details, setDetails] = useState(null);
     const [episodes, setEpisodes] = useState([]);
+    const [filteredEpisodes, setFilteredEpisodes] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [bookmarkedEpisodes, setBookmarkedEpisodes] = useState(new Set(JSON.parse(localStorage.getItem('bookmarkedEpisodes')) || []));
+    const [isLightsOff, setIsLightsOff] = useState(false);
+    const [hasInteracted, setHasInteracted] = useState(false);
     const videoRef = useRef(null);
     const [activeLink, setActiveLink] = useState('');
     const [watchedEpisodes, setWatchedEpisodes] = useState(new Set(JSON.parse(localStorage.getItem('watchedEpisodes')) || []));
@@ -30,14 +35,56 @@ const DetailsMovie = () => {
                 hls.loadSource(link);
                 hls.attachMedia(video);
                 hls.on(Hls.Events.MANIFEST_PARSED, () => {
-                    video.play();
+                    video.play().catch(error => {
+                        console.error('Error attempting to play:', error);
+                    });
                 });
             } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
                 video.src = link;
                 video.addEventListener('loadedmetadata', () => {
-                    video.play();
+                    video.play().catch(error => {
+                        console.error('Error attempting to play:', error);
+                    });
                 });
             }
+        }
+    };
+
+    const handleSearchChange = (e) => {
+        const value = e.target.value;
+        setSearchTerm(value);
+        setFilteredEpisodes(
+            episodes.map(server => ({
+                ...server,
+                server_data: server.server_data.filter(item => item.name.toLowerCase().includes(value.toLowerCase()))
+            }))
+        );
+    };
+
+    const toggleBookmark = (link) => {
+        setBookmarkedEpisodes((prevBookmarks) => {
+            const updatedBookmarks = new Set(prevBookmarks);
+            if (updatedBookmarks.has(link)) {
+                updatedBookmarks.delete(link);
+            } else {
+                updatedBookmarks.add(link);
+            }
+            localStorage.setItem('bookmarkedEpisodes', JSON.stringify([...updatedBookmarks]));
+            return updatedBookmarks;
+        });
+    };
+
+    const toggleLights = () => {
+        setIsLightsOff(!isLightsOff);
+    };
+
+    const handlePlay = () => {
+        setHasInteracted(true);
+        const video = videoRef.current;
+        if (video) {
+            video.play().catch(error => {
+                console.error('Error attempting to play:', error);
+            });
         }
     };
 
@@ -49,6 +96,7 @@ const DetailsMovie = () => {
                 console.log('Fetched episodes:', episodes);
                 setDetails(details);
                 setEpisodes(episodes);
+                setFilteredEpisodes(episodes);
             } catch (error) {
                 console.error('Error fetching movie details:', error);
             }
@@ -65,20 +113,36 @@ const DetailsMovie = () => {
     }, [episodes]);
 
     return (
-        <div>
+        <div className={`details_container ${isLightsOff ? 'lights-off' : ''}`}>
             {details ? (
-                <div className='details_container'>
+                <div>
                     <div style={{ backgroundImage: `url('${details.thumb_url}')` }} className='video'>
+                        {!hasInteracted && (
+                            <button onClick={handlePlay} className="initial-play-button">
+                                Play
+                            </button>
+                        )}
                         <video ref={videoRef} width="100%" height="auto" controls>
                             Your browser does not support the video tag.
                         </video>
+                        <button onClick={toggleLights} className="toggle-lights">
+                            {isLightsOff ? 'Turn On Lights' : 'Turn Off Lights'}
+                        </button>
                     </div>
                     <div className='episodes'>
                         <h1 className='Name'>{details.name}</h1>
+                        <p className='Name'>{details.quality}</p>
                         <div className='title'>
                             <h5>Danh sách phim</h5>
                         </div>
-                        {episodes.length > 0 ? episodes.map((server, index) => (
+                        <input
+                            type="text"
+                            placeholder="Search episodes..."
+                            value={searchTerm}
+                            onChange={handleSearchChange}
+                            className="search-bar"
+                        />
+                        {filteredEpisodes.length > 0 ? filteredEpisodes.map((server, index) => (
                             <div key={index} className='info_item'>
                                 {server.server_data.map((item, idx) => (
                                     <div key={idx} className='button_container'>
@@ -86,14 +150,15 @@ const DetailsMovie = () => {
                                             onClick={() => handleClick(item.link_m3u8)}
                                             style={{
                                                 background: activeLink === item.link_m3u8
-                                                    ? "#359000"
+                                                    ? "#de1b1f"
                                                     : watchedEpisodes.has(item.link_m3u8)
-                                                    ? "#444"
-                                                    : "linear-gradient(98.37deg, #f89e00 .99%, #da2f68 100%)"
+                                                    ? "#242424"
+                                                    : "#474747"
                                             }}
                                         >
                                             {item.name}
                                         </button>
+                                        
                                     </div>
                                 ))}
                             </div>

@@ -41,6 +41,181 @@
 .video video:focus {
     outline: none;
 }
+
+.toggle-lights {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 8;
+}
+
+.initial-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 8;
+}
+
+.lights-off .details_container::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 5;
+}
+
+.Name {
+    font-size: 2rem;
+    color: white;
+    text-transform: none;
+}
+
+.episodes {
+    background-color: #000000;
+    padding: 10px 10%;
+}
+
+.episodes .info_item {
+    display: grid;
+    grid-template-columns: repeat(12, auto);
+    row-gap: 10px;
+    max-height: 200px; 
+    column-gap: 10px;
+    padding: 0px 10px;
+    overflow: auto;
+    overflow-x: hidden; 
+    box-sizing: border-box;
+}
+
+.info_item::-webkit-scrollbar {
+    width: 5px; 
+}
+
+.info_item::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+}
+
+.info_item::-webkit-scrollbar-thumb {
+    background: #ff0000; 
+    border-radius: 10px;
+}
+
+.info_item::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.episodes .button_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.episodes button {
+    width: 100%;
+    height: 40px;
+    
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    line-height: 20px;
+    font-size: 13px;
+}
+
+.episodes button:hover {
+    background-color: rgb(255, 68, 68);
+}
+
+.episodes h5 {
+    font-family: "Inter", sans-serif;
+    text-transform: capitalize;
+    font-size: 25px;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.bookmark-button {
+    width: auto;
+    height: 40px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+/* .video {
+    background-size: cover;
+    padding: 100px 10% 20px 10%;
+    position: relative;
+    height: auto;
+    width: 100%;
+    background-position: center;
+    overflow: hidden;
+}
+
+.video::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    z-index: 1;
+}
+
+.video::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 50%, rgb(0, 0, 0) 100%);
+}
+
+.video video {
+    position: relative;
+    z-index: 7;
+    border-radius: 10px;
+}
+
+.video video:focus {
+    outline: none;
+}
 .Name{
     font-size: 2rem;
     color: white;
@@ -107,7 +282,7 @@
     font-family: "Inter", sans-serif;
     text-transform: capitalize;
     font-size: 25px;
-}
+} */
 
 @media (max-width: 1024px) and (min-width: 769px) {
     .video {

@@ -1,5 +1,4 @@
-/* CustomModal.css */
-.modalsearch {
+.modalsearch1 {
     display: none;
     position: fixed;
     z-index: 20;
@@ -7,31 +6,37 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly darker background */
     justify-content: center;
-    align-items: center;
-    margin: auto;
+    align-items: flex-start; /* Align items at the top */
 }
 
-.modalsearch.showsearch {
-    display: grid;
+.modalsearch1.showsearch1 {
+    display: flex;
 }
 
 .modal-content-search {
-    padding-top: 30px;
+    background-color: #141414; /* Netflix dark background */
+    padding: 20px;
     border-radius: 5px;
-    width: 100%;
+    width: 50%; /* Adjust width as needed */
+    max-width: 600px;
+    margin: 20px auto; /* Center horizontally */
     position: relative;
-    margin: auto;
-    margin-bottom: 500px;
 }
-
 .closesearch {
     position: absolute;
-    top: 0px;
-    right: 0;
-    padding: 0 5px;
-    font-size: 30px;
+    top: 10px;
+    margin: 13px 0;
+    right: 20px;
+    font-size: 55px;
     cursor: pointer;
-    color: #fff;
+    color: #020c1b;
+}
+
+
+@media (max-width: 768px) {
+    .modal-content-search {
+        width: 80%;
+    }
 }

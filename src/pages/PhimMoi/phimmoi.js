@@ -69,7 +69,7 @@ const SeriesMovie = () => {
                                         <LazyLoadImage
                                             src={`${movie.poster_url}`}
                                             alt={movie.title}
-                                            placeholderSrc='https://movix-taupe.vercel.app/assets/movix-logo-d720c325.svg'
+                                            placeholderSrc='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEN3UB3h1qrRON7O1XZxgqETeyN5OlV8_wsg&s'
                                         />
                                         <div className="image-overlay">
                                             <p>{movie.name}</p>
