@@ -4,7 +4,7 @@ import { getDetailMovie } from '../../Api/api';
 import Loading from '../../components/Loading/loading';
 import Hls from 'hls.js';
 import './watch.css';
-
+import { MdOutlinePlayCircle } from "react-icons/md";
 const DetailsMovie = () => {
     const { slug } = useParams();
     const [details, setDetails] = useState(null);
@@ -119,7 +119,7 @@ const DetailsMovie = () => {
                     <div style={{ backgroundImage: `url('${details.thumb_url}')` }} className='video'>
                         {!hasInteracted && (
                             <button onClick={handlePlay} className="initial-play-button">
-                                Play
+                              <i class="fa-solid fa-play"></i>
                             </button>
                         )}
                         <video ref={videoRef} width="100%" height="auto" controls>
@@ -131,7 +131,7 @@ const DetailsMovie = () => {
                     </div>
                     <div className='episodes'>
                         <h1 className='Name'>{details.name}</h1>
-                        <p className='Name'>{details.quality}</p>
+                        <p className='title1'>Chất lượng: {details.quality}</p>
                         <div className='title'>
                             <h5>Danh sách phim</h5>
                         </div>
