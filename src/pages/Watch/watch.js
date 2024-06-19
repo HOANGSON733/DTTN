@@ -117,11 +117,6 @@ const DetailsMovie = () => {
             {details ? (
                 <div>
                     <div style={{ backgroundImage: `url('${details.thumb_url}')` }} className='video'>
-                        {!hasInteracted && (
-                            <button onClick={handlePlay} className="initial-play-button">
-                              <i class="fa-solid fa-play"></i>
-                            </button>
-                        )}
                         <video ref={videoRef} width="100%" height="auto" controls>
                             Your browser does not support the video tag.
                         </video>

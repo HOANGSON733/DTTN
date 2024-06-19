@@ -118,7 +118,7 @@ export const getSearch = (keyword) => {
 
 export const getSimilarMovie = async () => {
     try {
-        const data = await fetchWithCache('/v1/api/tim-kiem', { keyword: "a", limit: 10000 });
+        const data = await fetchWithCache('/v1/api/tim-kiem', { keyword: "a", limit: 4000});
         return {
             similar: data.data.items,
         };

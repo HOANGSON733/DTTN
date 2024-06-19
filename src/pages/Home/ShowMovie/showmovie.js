@@ -29,10 +29,31 @@ const ShowHomePage = () => {
     const settings = {
         dots: false,
         infinite: false,
-        speed: 1000,
-        slidesToShow: 6,
+        speed: 2000,
+        slidesToShow: 10,
         slidesToScroll: 4,
         responsive: [
+            {
+                breakpoint: 2000,
+                settings: {
+                    slidesToShow: 7,
+                    slidesToScroll: 3,
+                },
+            },
+            {
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 6,
+                    slidesToScroll: 3,
+                },
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 3,
+                },
+            },
             {
                 breakpoint: 1024,
                 settings: {

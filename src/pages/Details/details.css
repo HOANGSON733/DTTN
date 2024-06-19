@@ -15,7 +15,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto;
-    gap: 50px;
+    /* gap: 20px; */
 }
 
 .content::before {
@@ -54,8 +54,8 @@ body {
 }
 
 .content_item img {
-    width: 340px;
-    height: 500px;
+    width: 90%;
+    height: auto;
 
     border-radius: 4px;
 }
@@ -79,7 +79,7 @@ body {
     font-family: "Inter", sans-serif;
     padding: 3px 5px !important;
     font-size: 12px;
-    background-color: #da2f68;
+    background-color: #696969;
     color: #fff;
     margin: 0 5px 0 0;
     border-radius: 4px;

@@ -55,26 +55,46 @@ const DetailsMovie = () => {
             window.scrollTo(0, 0);
         }
     }, [loading]);
-
     const settings = {
         dots: false,
         infinite: false,
-        speed: 1000,
-        slidesToShow: 5,
-        slidesToScroll: 2,
+        speed: 2000,
+        slidesToShow: 10,
+        slidesToScroll: 4,
         responsive: [
+            {
+                breakpoint: 2000,
+                settings: {
+                    slidesToShow: 7,
+                    slidesToScroll: 3,
+                },
+            },
+            {
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 6,
+                    slidesToScroll: 3,
+                },
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 3,
+                },
+            },
             {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 4,
-                    slidesToScroll: 2,
+                    slidesToScroll: 3,
                 },
             },
             {
-                breakpoint: 768,
+                breakpoint: 800,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 1,
+                    slidesToScroll: 2,
                     initialSlide: 1,
                 },
             },
@@ -94,7 +114,6 @@ const DetailsMovie = () => {
             },
         ]
     };
-
     if (loading) {
         return <Loading />;
     }

@@ -28,7 +28,7 @@ const DetailsMovie = () => {
                 setCategory(category);
                 setCountry(country);
                 setEpisodes(episodes);
-                setCommentUrl(`https://netflixnhs.vercel.app//movie/detailsmovie/${slug}`);
+                setCommentUrl(`https://netflixnhs.vercel.app/movie/detailsmovie/${slug}`);
 
                 if (window.FB) {
                     window.FB.XFBML.parse();
