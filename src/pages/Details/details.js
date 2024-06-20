@@ -93,7 +93,9 @@ const DetailsMovie = () => {
                             <div className='details_container'>
                                 <div className='content' style={{ backgroundImage: `url('${details.thumb_url}')` }}>
                                     <div className='content_item'>
+                                        <Link to={`/movie/detailsmovie/watch/${details.slug}`}>
                                         <img src={`${details.poster_url}`} alt={details.name} />
+                                        </Link>
                                     </div>
                                     <div className='content_item1'>
                                         <h5>{details.name}</h5>
@@ -129,13 +131,14 @@ const DetailsMovie = () => {
                                             )}
                                         </div>
                                         <div className='overview'>
-                                            <h5>Mô tả phim</h5>
-                                            <p>{details.content}</p>
+                                            
                                         </div>
                                         <div className='info'>
                                             {details.status && (
                                                 <div className='info_item'>
-                                                    <h5>Trạng thái:<p>{details.status}</p></h5>
+                                                    <h5> Đạo Diễn: <p>{details.director}</p></h5>
+                                                    <h5>Diễn viên:<p>{details.actor + ""}</p></h5>
+                            
                                                     <h5>Tập phim:<p>{details.episode_current}</p></h5>
                                                     <h5>Thời lượng:<p>{details.time}</p></h5>
                                                 </div>
@@ -145,12 +148,9 @@ const DetailsMovie = () => {
                                                     <h5>Quốc gia:{country && country.map(item => (<p key={item.id}>{item.name}</p>))}</h5>
                                                 </div>
                                             )}
-                                            {details.actor && (
-                                                <div className='info_item'>
-                                                    <h5>Diễn viên:<p>{details.actor + ""}</p></h5>
-                                                </div>
-                                            )}
-                                        </div>
+                                            
+                                        </div><h5>Mô tả phim</h5>
+                                            <p>{details.content}</p>
                                     </div>
                                 </div>
                                 <div className='trailer_container'>

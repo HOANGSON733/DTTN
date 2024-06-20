@@ -63,7 +63,7 @@ body {
 .content_item1 h5 {
     font-family: "Inter", sans-serif;
     color: #fff;
-    font-size: 32px;
+    font-size: 12px;
 }
 
 .content_item1 p {
@@ -153,37 +153,7 @@ body {
 }
 
 
-.watch .quality {
-    background-color: #253d60;
-    width: 90px;
-    height: 90px;
-    display: grid;
-    align-items: center;
-    margin-top: -25px;
-    z-index: 2;
-    border-radius: 50%;
-    position: relative;
 
-}
-
-.watch .quality h3 {
-    margin: auto;
-    width: 80px;
-    height: 80px;
-    border: 8px solid rgb(76, 187, 23);
-    border-radius: 50%;
-    align-items: center;
-    display: grid;
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bold;
-    font-size: 13px;
-    font-weight: 500;
-    color: #f89e00;
-    font-style: none;
-    font-weight: 800;
-
-}
 
 .watch .trailer button {
     width: 120px;
