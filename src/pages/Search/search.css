@@ -1,6 +1,6 @@
 .search_component {
     padding: 100px 200px 50px 200px;
-    background-color: #04152d;
+    background-color: #000000;
 }
 
 .search_component .search_row {
@@ -43,7 +43,7 @@
     position: relative;
 }
 
-.search_component .movie .year p {
+/* .search_component .movie .year p {
     margin: auto;
     width: 50px;
     height: 50px;
@@ -57,7 +57,7 @@
     font-weight: 500;
     background-color: #fff;
 
-}
+} */
 
 .search_component .movie .title a {
     font-family: "Inter", sans-serif;
@@ -81,7 +81,7 @@
 
 .not_found {
     height: 100vh;
-    background-image: url("https://media.giphy.com/media/eIsBUaOERJ3MrkkBL3/giphy.gif?cid=790b7611rxf5ni5cabt5f7in3kw7garosgf8deoekpuxxeau&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+    background-image: url("#");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -158,7 +158,7 @@
 .image-container {
     position: relative;
     overflow: hidden;
-    border-radius: 20px;
+    /* border-radius: 20px; */
 }
 
 .image-overlay {

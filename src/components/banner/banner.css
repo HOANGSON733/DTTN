@@ -57,7 +57,7 @@
 
 .text h1 {
     color: #f2f2f2;
-    font-size: 3.5rem;
+    font-size: 5rem;
     font-weight: 900;
     font-family: "Poppins", sans-serif;
     z-index: 5;
@@ -68,9 +68,9 @@
 
 .text p {
     color: #f2f2f2;
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 20px;
-    font-weight: 400;
+    font-weight: 100 !important;
     text-transform: capitalize;
     z-index: 5;
     font-family: "Inter", sans-serif;
@@ -82,9 +82,10 @@
     /* margin-top:-500px ; */
     align-items: center;
     justify-content: center;
-    width: 80%;
-    padding: 20px 20%;
+    width: 100%;
+    padding: 50px 20%;
    margin: 0 auto;
+   transform: .3s;
    
 }
 
@@ -110,7 +111,7 @@
 .search button {
     position: relative;
     z-index: 6;
-    width: 190px;
+    width: 200px;
     padding: 0;
     border: none;
     color: #fff;
@@ -143,7 +144,7 @@ transition: .3s;
         display: grid;
         align-items: center;
         justify-content: center;
-        margin-top: -500px;
+        margin-top: -650px;
     }
 
     .text h1 {
@@ -155,6 +156,7 @@ transition: .3s;
         font-family: "Inter", sans-serif;
         text-align: center;
         padding: 5px;
+        transition: .3s;
 
     }
 
@@ -174,15 +176,46 @@ transition: .3s;
         justify-content: center;
         width: 85%;
         padding: 50px 15%;
+        transition: 0.3s ease-in;
     }
 
    
+    .text h1 {
+        color: #f2f2f2;
+        font-size: 4rem;
+        font-weight: 600;
+        text-transform: capitalize;
+        z-index: 5;
+        font-family: "Inter", sans-serif;
+        text-align: center;
+        padding: 5px 20px;
+
+    }
+
+    .search input {
+        width: 100%;
+        padding: 10px 20px;
+        border: none;
+         font-size: 1.2rem;
+        height: 55px;
+        box-sizing: border-box;
+    }
+    
+    .search button {
+        width: 200px;
+        padding: 0;
+        border: none;
+        color: #fff;
+        font-size: 22px;
+         height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
   
 
-    .search a {
-        z-index: 6;
-    }
+   
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {
@@ -226,18 +259,18 @@ transition: .3s;
         display: grid;
         align-items: center;
         justify-content: center;
-        margin-top: -450px;
+        margin-top: -400px;
     }
 
     .text h1 {
         color: #f2f2f2;
-        font-size: 80px;
+        font-size: 3.5rem;
         font-weight: 600;
         text-transform: capitalize;
         z-index: 5;
         font-family: "Inter", sans-serif;
         text-align: center;
-        padding: 5px;
+        padding: 5px 20px;
 
     }
 
@@ -256,29 +289,26 @@ transition: .3s;
         align-items: center;
         justify-content: center;
         width: 100%;
-        padding: 40px 15%;
+        padding: 20px 15%;
+        transition: .3s ease-in;
     }
 
     .search input {
         width: 100%;
-        padding: 10px 40px;
+        padding: 10px 20px;
         border: none;
-        background-color: #fff;
-        border-radius: 20em 0 0 20em;
-        font-size: 26px;
-        height: 65px;
+         font-size: 22px;
+        height: 55px;
         box-sizing: border-box;
     }
 
     .search button {
-        width: 220px;
+        width: 150px;
         padding: 0;
         border: none;
         color: #fff;
-        font-size: 26px;
-        border-radius: 0 20em 20em 0;
-        background: linear-gradient(98.37deg, #f89e00 .99%, #da2f68 100%);
-        height: 65px;
+        font-size: 22px;
+         height: 55px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -362,8 +392,9 @@ transition: .3s;
         align-items: center;
         justify-content: center;
         width: 100%;
-        padding: 20px 20%;
+        padding: 20px 15%;
        margin: 0 auto;
+       transition: .3s ease-out;
        
     }
     
@@ -458,7 +489,7 @@ transition: .3s;
 
     .text h1 {
         color: #f2f2f2;
-        font-size: 2.4rem;
+        font-size: 1.7rem;
         font-weight: 600;
         text-transform: capitalize;
         z-index: 5;
@@ -476,6 +507,7 @@ transition: .3s;
         z-index: 5;
         font-family: "Inter", sans-serif;
         text-align: center;
+        margin: 5px;
     }
 
     .search {
@@ -483,15 +515,16 @@ transition: .3s;
         align-items: center;
         justify-content: center;
         width: 100%;
-        padding: 30px 8%;
+        padding: 10px 8%;
+        transition: .5s;
     }
 
     .search input {
         width: 100%;
         padding: 10px 20px;
         border: none;
-        background-color: #fff;
-        border-radius: 20em 0 0 20em;
+      
+        
         font-size: 16px;
         height: 40px;
         box-sizing: border-box;
@@ -503,8 +536,7 @@ transition: .3s;
         border: none;
         color: #fff;
         font-size: 14px;
-        border-radius: 0 20em 20em 0;
-        background: linear-gradient(98.37deg, #f89e00 .99%, #da2f68 100%);
+        
         height: 40px;
         display: flex;
         align-items: center;
@@ -516,111 +548,7 @@ transition: .3s;
     }
 }
 
-@media (max-width: 400px) {
-    .slideshow-container {
-        position: relative;
-        width: 100%;
-        height: 40vh;
-        margin: auto;
 
-
-    }
-
-    .slideshow-container::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-image: inherit;
-        background-size: cover;
-        background-position: center;
-        z-index: 1;
-    }
-
-
-    .mySlides {
-        display: none;
-        width: 100%;
-        height: 100%;
-    }
-
-    .mySlides.active {
-        display: block;
-
-    }
-
-
-    .text {
-        position: relative;
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        margin-top: -190px;
-        padding: 0px 20px;
-    }
-
-    .text h1 {
-        color: #f2f2f2;
-        font-size: 2.4rem;
-        font-weight: 600;
-        text-transform: capitalize;
-        z-index: 5;
-        font-family: "Inter", sans-serif;
-        text-align: center;
-        padding: 5px;
-
-    }
-
-    .text p {
-        color: #f2f2f2;
-        font-size: 0.9rem;
-        font-weight: 600;
-        text-transform: capitalize;
-        z-index: 5;
-        font-family: "Inter", sans-serif;
-        text-align: center;
-    }
-
-    .search {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        padding: 30px 8%;
-    }
-
-    .search input {
-        width: 100%;
-        padding: 10px 20px;
-        border: none;
-        background-color: #fff;
-        border-radius: 20em 0 0 20em;
-        font-size: 15px;
-        height: 40px;
-        box-sizing: border-box;
-    }
-
-    .search button {
-        width: 130px;
-        padding: 0;
-        border: none;
-        color: #fff;
-        font-size: 14px;
-        border-radius: 0 20em 20em 0;
-        background: linear-gradient(98.37deg, #f89e00 .99%, #da2f68 100%);
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .search a {
-        z-index: 6;
-    }
-
-}
 
 @media (max-width: 320px) {
     .slideshow-container {
@@ -683,6 +611,7 @@ transition: .3s;
         justify-content: center;
         width: 100%;
         padding: 10px 5%;
+        transition: .5s ease-in;
     }
 
     .search input {

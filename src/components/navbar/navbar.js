@@ -109,7 +109,7 @@ const Navbar = () => {
                     </button>
                     <div className={`bar ${menuOpen ? 'active' : ''}`}>
                         <ul>
-                            <li><Link style={menu === "trang_chu" ? { borderBottom: "none" } : {}} onClick={() => handleClick('trang_chu')} to='/Movix'>Trang Chủ</Link></li>
+                            <li><Link style={menu === "trang_chu" ? { color: "red" } : {}} onClick={() => handleClick('trang_chu')} to='/Movix'>Trang Chủ</Link></li>
                             <li><Link style={menu === "phim_le" ? { color: "red" } : {}} onClick={() => handleClick('phim_le')} to='/movie/phim_le'>Phim Lẻ</Link></li>
                             <li><Link style={menu === "phim_bo" ? { color: "red" } : {}} onClick={() => handleClick('phim_bo')} to='/movie/phim_bo'>Phim Bộ</Link></li>
                             <li><Link style={menu === "tvshow" ? { color: "red" } : {}} onClick={() => handleClick('tvshow')} to='/movie/tvshow'>Tv Show</Link></li>

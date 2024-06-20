@@ -1,19 +1,19 @@
 {
-  "short_name": "Movix",
-  "name": "Movix App Sample",
+  "short_name": "Netflix",
+  "name": "",
   "icons": [
     {
-      "src": "movix-logo.png",
+      "src": "https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2023.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "movix-logo.png",
+      "src": "https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2023.ico",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "movix-logo.png",
+      "src": "https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2023.ico",
       "type": "image/png",
       "sizes": "512x512"
     }

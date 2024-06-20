@@ -91,14 +91,35 @@
   @media (max-width: 480px) {
     .footer-links ul {
       gap: 5px;
+      font-size: 10px;
       /* flex-direction: column; */
       align-items: center;
     }
   
     .footer-links ul li {
       margin: 5px 0;
+      
     }
-  
+    .footer-info {
+      text-align: center;
+      margin-top: 0px;
+  }
+  .fab, .fa-brands {
+    font-weight: 400;
+    font-size: 15px;
+  }
+    .fa-instagram:before {
+      content: "\f16d";
+      font-size: 15px;
+  }
+    .fa-twitter:before {
+      content: "\f099";
+      font-size: 15px;
+  }
+    .fa-youtube:before {
+      content: "\f167";
+      font-size: 15px;
+  }
     .footer-social ul {
       flex-wrap: wrap;
       justify-content: center;
@@ -106,5 +127,15 @@
   
     .footer-social ul li {
       margin: 5px 10px;
+      
     }
+    .footer-info p {
+      
+      font-size: 10px;
+  }
+  .footer-social ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+}
   }

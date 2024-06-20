@@ -77,7 +77,9 @@ const SeriesMovie = () => {
                                     </div>
                                 </Link>
                                 <div className='favourite'>
-                                    
+                                <div className='year'>
+                                        <p>{movie.episode_current}</p>
+                                    </div>
                                     {favourite.includes(movie.slug) ? (
                                         <i
                                             style={{ color: "#f89e00" }}
@@ -93,6 +95,8 @@ const SeriesMovie = () => {
                                 </div>
                                 <div className='title'>
                                     <Link to={`/movie/detailsmovie/${movie.slug}`}>{movie.name}</Link>
+                                    <p>{movie.origin_name} ({movie.year})</p>
+                                    
                                 </div>
                             </div>
                         ))}
