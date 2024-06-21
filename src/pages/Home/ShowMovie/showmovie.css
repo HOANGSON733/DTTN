@@ -35,7 +35,7 @@
 }
 
 .category a:hover {
-  color: rgba(255, 79, 79, 0.829);
+  color: rgba(190, 0, 0, 0.829);
   transition: 0.3s;
 }
 
@@ -44,39 +44,13 @@
 }
 
 .show_series .movie img {
-  border-radius: 0px;
+
   height: 320px;
   width: 100%;
   z-index: 1;
   position: relative;
 }
 
-.show_series .movie .year {
-  background-color: #fff;
-  width: 55px;
-  height: 55px;
-  display: grid;
-  align-items: center;
-  margin-top: -25px;
-  z-index: 2;
-  border-radius: 50%;
-  position: relative;
-}
-
-.show_series .movie .year p {
-  margin: auto;
-  width: 50px;
-  height: 50px;
-  border: 5px solid rgb(76, 187, 23);
-  border-radius: 50%;
-  align-items: center;
-  display: grid;
-  text-align: center;
-  font-family: "Inter", sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  background-color: #fff;
-}
 
 .show_series .movie .title a {
   font-family: "Inter", sans-serif;
@@ -98,13 +72,10 @@
 .show_series .view_more button {
   color: #fff;
   padding: 10px 20px;
-  background: linear-gradient(98.37deg, #f89e00 0.99%, #da2f68 100%);
   border-radius: 20em;
 }
 
-.show_series .view_more button:hover {
-  background: linear-gradient(98.37deg, #359000 0.99%, #f89e00 100%);
-}
+
 
 .show_series .view_more {
   padding: 80% 20%;
@@ -149,39 +120,13 @@
   }
 
   .show_series .movie img {
-    border-radius: 20px;
+
     height: 320px;
     width: 100%;
     z-index: 1;
     position: relative;
   }
 
-  .show_series .movie .year {
-    background-color: #fff;
-    width: 55px;
-    height: 55px;
-    display: grid;
-    align-items: center;
-    margin-top: -25px;
-    z-index: 2;
-    border-radius: 50%;
-    position: relative;
-  }
-
-  .show_series .movie .year p {
-    margin: auto;
-    width: 50px;
-    height: 50px;
-    border: 5px solid rgb(76, 187, 23);
-    border-radius: 50%;
-    align-items: center;
-    display: grid;
-    text-align: center;
-    font-family: "Inter", sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    background-color: #fff;
-  }
 
   .show_series .movie .title a {
     font-family: "Inter", sans-serif;
@@ -203,13 +148,10 @@
   .show_series .view_more button {
     color: #fff;
     padding: 10px 20px;
-    background: linear-gradient(98.37deg, #f89e00 0.99%, #da2f68 100%);
     border-radius: 20em;
   }
 
-  .show_series .view_more button:hover {
-    background: linear-gradient(98.37deg, #359000 0.99%, #f89e00 100%);
-  }
+  
 
   .show_series .view_more {
     padding: 80% 20%;
@@ -242,39 +184,13 @@
   }
 
   .show_series .movie img {
-    border-radius: 20px;
+    
     height: 250px;
     width: 100%;
     z-index: 1;
     position: relative;
   }
 
-  .show_series .movie .year {
-    background-color: #fff;
-    width: 55px;
-    height: 55px;
-    display: grid;
-    align-items: center;
-    margin-top: -25px;
-    z-index: 2;
-    border-radius: 50%;
-    position: relative;
-  }
-
-  .show_series .movie .year p {
-    margin: auto;
-    width: 50px;
-    height: 50px;
-    border: 5px solid rgb(76, 187, 23);
-    border-radius: 50%;
-    align-items: center;
-    display: grid;
-    text-align: center;
-    font-family: "Inter", sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    background-color: #fff;
-  }
 
   .show_series .movie .title a {
     font-family: "Inter", sans-serif;
@@ -296,13 +212,10 @@
   .show_series .view_more button {
     color: #fff;
     padding: 10px 10px;
-    background: linear-gradient(98.37deg, #f89e00 0.99%, #da2f68 100%);
     border-radius: 20em;
   }
 
-  .show_series .view_more button:hover {
-    background: linear-gradient(98.37deg, #359000 0.99%, #f89e00 100%);
-  }
+  
 
   .show_series .view_more {
     padding: 80% 20%;
@@ -335,38 +248,11 @@
   }
 
   .show_series .movie img {
-    border-radius: 20px;
+ 
     height: 250px;
     width: 100%;
     z-index: 1;
     position: relative;
-  }
-
-  .show_series .movie .year {
-    background-color: #fff;
-    width: 55px;
-    height: 55px;
-    display: grid;
-    align-items: center;
-    margin-top: -25px;
-    z-index: 2;
-    border-radius: 50%;
-    position: relative;
-  }
-
-  .show_series .movie .year p {
-    margin: auto;
-    width: 50px;
-    height: 50px;
-    border: 5px solid rgb(76, 187, 23);
-    border-radius: 50%;
-    align-items: center;
-    display: grid;
-    text-align: center;
-    font-family: "Inter", sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    background-color: #fff;
   }
 
   .show_series .movie .title a {
@@ -389,12 +275,7 @@
   .show_series .view_more button {
     color: #fff;
     padding: 10px 10px;
-    background: linear-gradient(98.37deg, #f89e00 0.99%, #da2f68 100%);
     border-radius: 20em;
-  }
-
-  .show_series .view_more button:hover {
-    background: linear-gradient(98.37deg, #359000 0.99%, #f89e00 100%);
   }
 
   .show_series .view_more {
@@ -428,38 +309,11 @@
   }
 
   .show_series .movie img {
-    border-radius: 20px;
+   
     height: 220px;
     width: 100%;
     z-index: 1;
     position: relative;
-  }
-
-  .show_series .movie .year {
-    background-color: #fff;
-    width: 55px;
-    height: 55px;
-    display: grid;
-    align-items: center;
-    margin-top: -25px;
-    z-index: 2;
-    border-radius: 50%;
-    position: relative;
-  }
-
-  .show_series .movie .year p {
-    margin: auto;
-    width: 50px;
-    height: 50px;
-    border: 5px solid rgb(76, 187, 23);
-    border-radius: 50%;
-    align-items: center;
-    display: grid;
-    text-align: center;
-    font-family: "Inter", sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    background-color: #fff;
   }
 
   .show_series .movie .title a {
@@ -482,14 +336,11 @@
   .show_series .view_more button {
     color: #fff;
     padding: 10px 20px;
-    background: linear-gradient(98.37deg, #f89e00 0.99%, #da2f68 100%);
     border-radius: 20em;
     font-size: 14px !important;
   }
 
-  .show_series .view_more button:hover {
-    background: linear-gradient(98.37deg, #359000 0.99%, #f89e00 100%);
-  }
+  
 
   .show_series .view_more {
     padding: 80% 20%;
@@ -529,32 +380,6 @@
     position: relative;
   }
 
-  .show_series .movie .year {
-    background-color: #fff;
-    width: 55px;
-    height: 55px;
-    display: grid;
-    align-items: center;
-    margin-top: -25px;
-    z-index: 2;
-    border-radius: 50%;
-    position: relative;
-  }
-
-  .show_series .movie .year p {
-    margin: auto;
-    width: 50px;
-    height: 50px;
-    border: 5px solid rgb(76, 187, 23);
-    border-radius: 50%;
-    align-items: center;
-    display: grid;
-    text-align: center;
-    font-family: "Inter", sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    background-color: #fff;
-  }
 
   .show_series .movie .title a {
     font-family: "Inter", sans-serif;
@@ -576,13 +401,9 @@
   .show_series .view_more button {
     color: #fff;
     padding: 10px 10px;
-    background: linear-gradient(98.37deg, #f89e00 0.99%, #da2f68 100%);
     border-radius: 20em;
   }
 
-  .show_series .view_more button:hover {
-    background: linear-gradient(98.37deg, #359000 0.99%, #f89e00 100%);
-  }
 
   .show_series .view_more {
     padding: 80% 20%;

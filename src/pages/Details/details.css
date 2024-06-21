@@ -315,7 +315,7 @@ body {
   .info .info_item h5 {
     display: grid;
     grid-template-columns: 120px 1fr;
-    border-bottom: 1px solid #253d60;
+    border-bottom: 1px solid #000000;
     padding: 15px 0;
   }
 
@@ -427,7 +427,7 @@ body {
   .info .info_item h5 {
     display: grid;
     grid-template-columns: 85px 1fr;
-    border-bottom: 1px solid #253d60;
+    border-bottom: 1px solid #000000;
     padding: 10px 0;
   }
 
@@ -553,7 +553,7 @@ body {
 
   .info .info_item h5 {
     display: flex;
-    border-bottom: 1px solid #253d60;
+    border-bottom: 1px solid #000000;
     padding: 10px 0;
   }
 

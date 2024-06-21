@@ -21,6 +21,7 @@
   z-index: 1;
 }
 
+
 .video::after {
   content: "";
   position: absolute;
@@ -96,6 +97,7 @@
 .title1 {
   line-height: 30px;
   color: white;
+  padding: 20px 0;
 }
 .episodes {
   background-color: #000000;
