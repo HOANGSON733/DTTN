@@ -1,127 +1,165 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 // import { Link } from 'react-router-dom';
-import './phimle.css';
-import { Link } from 'react-router-dom';
-import Loading from '../../components/Loading/loading'
-import { getPhimLe } from '../../Api/api';
-import Filterform from '../../components/FilterForm/filterform';
+import "./phimle.css";
+import { Link } from "react-router-dom";
+import Loading from "../../components/Loading/loading";
+import { getPhimLe } from "../../Api/api";
+import Filterform from "../../components/FilterForm/filterform";
 
 const SeriesMovie = () => {
-    const [phimle, setPhimLe] = useState(null);
-    const [pagination, setPagination] = useState({ currentPage: 1, totalPages: 1 });
-    const [favourite, setFavourite] = useState(() => {
-        const storedFavourites = localStorage.getItem('favourite');
-        return storedFavourites ? JSON.parse(storedFavourites) : [];
-    });
+  const [phimle, setPhimLe] = useState(null);
+  const [pagination, setPagination] = useState({
+    currentPage: 1,
+    totalPages: 1,
+  });
+  const [favourite, setFavourite] = useState(() => {
+    const storedFavourites = localStorage.getItem("favourite");
+    return storedFavourites ? JSON.parse(storedFavourites) : [];
+  });
 
-    const handleClick = async (pageNumber) => {
-        try {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            const phimleLS = localStorage.getItem('phimle');
-            const paginationLS = localStorage.getItem('pagination');
-            if (phimleLS && paginationLS) {
-                setPhimLe(JSON.parse(phimleLS));
-                setPagination(JSON.parse(paginationLS));
-            }
-            const { phimLe, pagination } = await getPhimLe(pageNumber);
-            setPhimLe(phimLe);
-            setPagination(pagination);
+  const handleClick = async (pageNumber) => {
+    try {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      const phimleLS = localStorage.getItem("phimle");
+      const paginationLS = localStorage.getItem("pagination");
+      if (phimleLS && paginationLS) {
+        setPhimLe(JSON.parse(phimleLS));
+        setPagination(JSON.parse(paginationLS));
+      }
+      const { phimLe, pagination } = await getPhimLe(pageNumber);
+      setPhimLe(phimLe);
+      setPagination(pagination);
 
-            localStorage.setItem('phimle', JSON.stringify(phimLe));
-            localStorage.setItem('pagination', JSON.stringify(pagination));
+      localStorage.setItem("phimle", JSON.stringify(phimLe));
+      localStorage.setItem("pagination", JSON.stringify(pagination));
 
-            console.log('PhimLe:', phimLe);
-            console.log('Pagination:', pagination);
-        } catch (error) {
-            console.error('Error fetching movies:', error);
-        }
-    };
+      console.log("PhimLe:", phimLe);
+      console.log("Pagination:", pagination);
+    } catch (error) {
+      console.error("Error fetching movies:", error);
+    }
+  };
 
-    useEffect(() => {
-        handleClick(1);
-    }, []);
+  useEffect(() => {
+    handleClick(1);
+  }, []);
 
-    const handleClickFavourite = (slug) => {
-        let updatedFavourites;
+  const handleClickFavourite = (slug) => {
+    let updatedFavourites;
 
-        if (favourite.includes(slug)) {
-            updatedFavourites = favourite.filter(item => item !== slug);
-        } else {
-            updatedFavourites = [...favourite, slug];
-        }
+    if (favourite.includes(slug)) {
+      updatedFavourites = favourite.filter((item) => item !== slug);
+    } else {
+      updatedFavourites = [...favourite, slug];
+    }
 
-        setFavourite(updatedFavourites);
-        localStorage.setItem('favourite', JSON.stringify(updatedFavourites));
-    };
+    setFavourite(updatedFavourites);
+    localStorage.setItem("favourite", JSON.stringify(updatedFavourites));
+  };
 
-    return (
-        <div>
-            {phimle ? (
-                <div className='film_component'>
-                    <Filterform />
-                    <div className='category'>Phim Lẻ</div>
-                    <div className="list">
-                        {phimle && phimle.map(movie => (
-                            <div key={movie.id} className="movie">
-                                <Link to={`/movie/detailsmovie/${movie.slug}`}>
-                                    <div className="image-container">
-                                        <img
-                                            src={`https://img.phimapi.com/${movie.poster_url}`}
-                                            alt={movie.title}
-                                            placeholderSrc='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEN3UB3h1qrRON7O1XZxgqETeyN5OlV8_wsg&s'
-                                        />
-                                        <div className="image-overlay">
-                                            <p>{movie.name}</p>
-                                        </div>
-                                    </div>
-                                </Link>
-                                <div className='favourite'>
-                                <div className='year'>
-                                        <p>{movie.episode_current}</p>
-                                    </div>
-                                    {favourite.includes(movie.slug) ? (
-                                        <i
-                                            style={{ color: "#f89e00" }}
-                                            onClick={() => handleClickFavourite(movie.slug)}
-                                            className="fa-solid fa-bookmark"
-                                        ></i>
-                                    ) : (
-                                        <i
-                                            onClick={() => handleClickFavourite(movie.slug)}
-                                            className="fa-regular fa-bookmark"
-                                        ></i>
-                                    )}
-                                </div>
-                                <div className='title'>
-                                    <Link to={`/movie/detailsmovie/${movie.slug}`}>{movie.name}</Link>
-                                    <p>{movie.origin_name} ({movie.year})</p>
-                                    
-                                </div>
-                            </div>
-                        ))}
+  return (
+    <div>
+      {phimle ? (
+        <div className="film_component">
+          <Filterform />
+          <div className="category">Phim Lẻ</div>
+          <div className="list">
+            {phimle &&
+              phimle.map((movie) => (
+                <div key={movie.id} className="movie">
+                  <Link to={`/movie/detailsmovie/${movie.slug}`}>
+                    <div className="image-container">
+                      <img
+                        src={`https://img.phimapi.com/${movie.poster_url}`}
+                        alt={movie.title}
+                        placeholderSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEN3UB3h1qrRON7O1XZxgqETeyN5OlV8_wsg&s"
+                      />
+                      <div className="image-overlay">
+                        <p>{movie.name}</p>
+                      </div>
                     </div>
-                    <div className='pagination'>
-                        <div className='page'>
-                            <button hidden={pagination.currentPage <= 1} onClick={() => handleClick(pagination.currentPage - 1)}><i class="fa-sharp fa-solid fa-arrow-left"></i></button>
-                            <button hidden={pagination.currentPage <= 2} onClick={() => handleClick(pagination.currentPage - 2)}>{pagination.currentPage - 2}</button>
-                            <button hidden={pagination.currentPage <= 1} onClick={() => handleClick(pagination.currentPage - 1)}>{pagination.currentPage - 1}</button>
-                            <button style={{ backgroundColor: 'red', color: "#fff" }}>{pagination.currentPage}</button>
-                            <button hidden={pagination.currentPage >= pagination.totalPages} onClick={() => handleClick(pagination.currentPage + 1)}>{pagination.currentPage + 1}</button>
-                            <button hidden={pagination.currentPage >= pagination.totalPages} onClick={() => handleClick(pagination.currentPage + 2)}>{pagination.currentPage + 2}</button>
-                            <button onClick={() => handleClick(pagination.currentPage + 1)}><i class="fa-sharp fa-solid fa-arrow-right"></i></button>
-                        </div>
-                        <div className='result'>
-                            <p>Trang {pagination.currentPage}/{pagination.totalPages} | Tổng {pagination.totalItems} Kết quả</p>
-                        </div>
+                  </Link>
+                  <div className="favourite">
+                    <div className="year">
+                      <p>{movie.episode_current}</p>
                     </div>
+                    {favourite.includes(movie.slug) ? (
+                      <i
+                        style={{ color: "#f89e00" }}
+                        onClick={() => handleClickFavourite(movie.slug)}
+                        className="fa-solid fa-bookmark"
+                      ></i>
+                    ) : (
+                      <i
+                        onClick={() => handleClickFavourite(movie.slug)}
+                        className="fa-regular fa-bookmark"
+                      ></i>
+                    )}
+                  </div>
+                  <div className="title">
+                    <Link to={`/movie/detailsmovie/${movie.slug}`}>
+                      {movie.name}
+                    </Link>
+                    <p>
+                      {movie.origin_name} ({movie.year})
+                    </p>
+                  </div>
                 </div>
-            ) : (
-                <Loading></Loading>
-            )}
-
+              ))}
+          </div>
+          <div className="pagination">
+            <div className="page">
+              <button
+                hidden={pagination.currentPage <= 1}
+                onClick={() => handleClick(pagination.currentPage - 1)}
+              >
+                <i class="fa-sharp fa-solid fa-arrow-left"></i>
+              </button>
+              <button
+                hidden={pagination.currentPage <= 2}
+                onClick={() => handleClick(pagination.currentPage - 2)}
+              >
+                {pagination.currentPage - 2}
+              </button>
+              <button
+                hidden={pagination.currentPage <= 1}
+                onClick={() => handleClick(pagination.currentPage - 1)}
+              >
+                {pagination.currentPage - 1}
+              </button>
+              <button style={{ backgroundColor: "red", color: "#fff" }}>
+                {pagination.currentPage}
+              </button>
+              <button
+                hidden={pagination.currentPage >= pagination.totalPages}
+                onClick={() => handleClick(pagination.currentPage + 1)}
+              >
+                {pagination.currentPage + 1}
+              </button>
+              <button
+                hidden={pagination.currentPage >= pagination.totalPages}
+                onClick={() => handleClick(pagination.currentPage + 2)}
+              >
+                {pagination.currentPage + 2}
+              </button>
+              <button onClick={() => handleClick(pagination.currentPage + 1)}>
+                <i class="fa-sharp fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+            <div className="result">
+              <p>
+                Trang {pagination.currentPage}/{pagination.totalPages} | Tổng{" "}
+                {pagination.totalItems} Kết quả
+              </p>
+            </div>
+          </div>
         </div>
-    );
+      ) : (
+        <Loading></Loading>
+      )}
+    </div>
+  );
 };
 
 export default SeriesMovie;

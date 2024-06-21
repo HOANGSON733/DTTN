@@ -5,7 +5,7 @@
 
 .film_component .list {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(9, 1fr);
   /* gap: 1px; */
 }
 
@@ -91,9 +91,10 @@
 .favourite i {
   font-size: 25px;
   color: rgb(255, 255, 255, 0.5);
-  padding: 10px 10px 0 10px;
+  padding: 10px 0px 0 10px;
   cursor: pointer;
 }
+
 .film_component .movie .year {
 
   height: 30px;
@@ -153,6 +154,22 @@
   color: #fff;
   text-decoration: none;
 }
+@media (max-width: 3000px) and (min-width: 2000px) {
+  .film_component .list {
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    /* gap: 1px; */
+  }
+}
+
+@media (max-width: 2000px) and (min-width: 1440px) {
+  .film_component .list {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    /* gap: 1px; */
+  }
+
+}
 
 @media (max-width: 1440px) and (min-width: 1301px) {
   .film_component {
@@ -174,6 +191,26 @@
     padding: 15px 0;
   }
 
+  .film_component .movie .year p {
+    margin: 0;
+    width: 6rem;
+    /* padding: 10px 50px; */
+    height: 25px;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: rgba(255, 123, 0, 0.616);
+    align-items: center;
+    /* display: flex; */
+    display: inline-block;
+      line-height: 25px;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    position: relative;
+    left: 2.4rem;
+  }
   .film_component .movie {
     width: 100%;
     padding: 0 10px;
@@ -181,22 +218,10 @@
 
   .film_component .movie img {
     width: 320px;
-    border-radius: 10px;
+
     height: 300px;
     width: 100%;
     z-index: 1;
-    position: relative;
-  }
-
-  .film_component .movie .year {
-    background-color: #fff;
-    width: 55px;
-    height: 55px;
-    display: grid;
-    align-items: center;
-    margin-top: -25px;
-    z-index: 2;
-    border-radius: 50%;
     position: relative;
   }
 
@@ -210,7 +235,7 @@
 
   .title {
     white-space: nowrap;
-    width: 100%;
+    width: 88%;
     overflow: hidden;
     text-overflow: ellipsis;
     color: #fff;
@@ -232,7 +257,7 @@
   }
 }
 
-@media (max-width: 1300px) and (min-width: 961px) {
+@media (max-width: 1300px) and (min-width: 1200px) {
   .film_component {
     padding: 100px 12% 50px 12%;
   }
@@ -257,9 +282,29 @@
     padding: 0 15px;
   }
 
+  .film_component .movie .year p {
+    margin: 0;
+    width: 6rem;
+    /* padding: 10px 50px; */
+    height: 25px;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: rgba(255, 123, 0, 0.616);
+    align-items: center;
+    /* display: flex; */
+    display: inline-block;
+      line-height: 25px;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    position: relative;
+    left: 2.8rem;
+  }
   .film_component .movie img {
     width: 320px;
-    border-radius: 10px;
+
     height: 300px;
     z-index: 1;
     position: relative;
@@ -275,7 +320,7 @@
 
   .title {
     white-space: nowrap;
-    width: 100%;
+    width: 80%;
     overflow: hidden;
     text-overflow: ellipsis;
     color: #fff;
@@ -292,8 +337,34 @@
     font-size: 2.8rem;
   }
 }
-
-@media (max-width: 960px) and (min-width: 769px) {
+@media (max-width: 1200px) and (min-width: 1024px) {
+  .film_component .list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* gap: 1px; */
+  }
+  .film_component .movie .year p {
+    margin: 0;
+    width: 6rem;
+    /* padding: 10px 50px; */
+    height: 25px;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: rgba(255, 123, 0, 0.616);
+    align-items: center;
+    /* display: flex; */
+    display: inline-block;
+      line-height: 25px;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    position: relative;
+    left: 3.5rem;
+  }
+}
+@media (max-width: 1024px) and (min-width: 900px) {
   .film_component .list {
     display: grid;
     grid-template-columns: repeat(3, 33%);
@@ -317,22 +388,42 @@
   .film_component .movie img {
     width: 320px;
     height: 320px !important;
-    border-radius: 10px;
     height: auto;
     z-index: 1;
     position: relative;
   }
+  
+.film_component .movie .year {
 
-  .film_component .movie .year {
-    background-color: #fff;
-    width: 55px;
-    height: 55px;
-    display: grid;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  margin-right: 116px;
+  margin-top: -318px;
+  left: 403px;
+  z-index: 2;
+}
+
+
+  .film_component .movie .year p {
+    margin: 0;
+    width: 6rem;
+    /* padding: 10px 50px; */
+    height: 25px;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: rgba(255, 123, 0, 0.616);
     align-items: center;
-    margin-top: -25px;
-    z-index: 2;
-    border-radius: 50%;
+    /* display: flex; */
+    display: inline-block;
+      line-height: 25px;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
     position: relative;
+    left: 1rem;
   }
   .film_component .movie .title a {
     font-family: "Inter", sans-serif;
@@ -344,7 +435,7 @@
 
   .title {
     white-space: nowrap;
-    width: 100%;
+    width: 90%;
     overflow: hidden;
     text-overflow: ellipsis;
     color: #fff;
@@ -365,8 +456,46 @@
     font-size: 2.2rem;
   }
 }
+@media (max-width: 900px) and (min-width: 768px) {
+  .film_component .list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* gap: 1px; */
+  }
+.film_component .movie .year {
 
-@media (max-width: 768px) and (min-width: 481px) {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  margin-right: 116px;
+  margin-top: -299px;
+  left: 403px;
+  z-index: 2;
+}
+
+
+  .film_component .movie .year p {
+    margin: 0;
+    width: 5rem;
+    /* padding: 10px 50px; */
+    height: 25px;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: rgba(255, 123, 0, 0.616);
+    align-items: center;
+    /* display: flex; */
+    display: inline-block;
+      line-height: 25px;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    position: relative;
+    left: 2.5rem;
+  }
+}
+@media (max-width: 768px) and (min-width: 681px) {
   .film_component .list {
     display: grid;
     grid-template-columns: repeat(3, 33%);
@@ -389,24 +518,44 @@
 
   .film_component .movie img {
     width: 300px;
-    border-radius: 10px;
+
     height: 260px;
     z-index: 1;
     position: relative;
   }
 
-  .film_component .movie .year {
-    background-color: #fff;
-    width: 55px;
-    height: 55px;
-    display: grid;
-    align-items: center;
-    margin-top: -25px;
-    z-index: 2;
-    border-radius: 50%;
-    position: relative;
-  }
 
+  .film_component .movie .year {
+
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-right: 116px;
+    margin-top: -260px;
+    z-index: 2;
+  }
+  
+  
+    .film_component .movie .year p {
+      margin: 0;
+      width: 5rem;
+      /* padding: 10px 50px; */
+      height: 25px;
+      border-radius: 5px;
+      display: inline-block;
+      background-color: rgba(255, 123, 0, 0.616);
+      align-items: center;
+      /* display: flex; */
+      display: inline-block;
+        line-height: 25px;
+      color: #ffffff;
+      text-align: center;
+      font-family: "Inter", sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      position: relative;
+      left: 4.4rem;
+    }
   .film_component .movie .title a {
     font-family: "Inter", sans-serif;
     text-decoration: none;
@@ -435,7 +584,14 @@
     font-size: 2.1rem;
   }
 }
-
+@media screen and (max-width:681px) {
+  
+  .film_component .list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+  }
+}
 @media (max-width: 480px) {
   .not_found_film p {
     font-size: 1.7rem;
@@ -466,23 +622,61 @@
 
   .film_component .movie img {
     width: 280px;
-    border-radius: 5px !important;
     height: 240px;
     z-index: 1;
     position: relative;
   }
 
+  .film_component .movie .year {
+
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-right: 116px;
+    margin-top: -240px;
+    z-index: 2;
+  }
+  .title p {
+    padding: 6px 0;
+    font-size: 8px;
+    color: #b3b3b3;
+}
+  
+    .film_component .movie .year p {
+      margin: 0;
+      width: 5rem;
+      /* padding: 10px 50px; */
+      height: 25px;
+      border-radius: 5px;
+      display: inline-block;
+      background-color: rgba(255, 123, 0, 0.616);
+      align-items: center;
+      /* display: flex; */
+      display: inline-block;
+        line-height: 25px;
+      color: #ffffff;
+      text-align: center;
+      font-family: "Inter", sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      position: relative;
+      left: 4.4rem;
+    }
   .film_component .movie .title a {
     font-family: "Inter", sans-serif;
     text-decoration: none;
     font-weight: 400;
     color: #fff;
-    font-size: 16px;
+    font-size: 12px;
   }
-
+  .film_component .movie {
+    
+    padding: 0 10px;
+    /* margin-top: 20px; */
+}
   .title {
     white-space: nowrap;
-    width: 100%;
+    width: 90%;
     overflow: hidden;
     text-overflow: ellipsis;
     color: #fff;
@@ -501,7 +695,12 @@
     height: 30px;
     margin: 20px 5px;
   }
-
+  .favourite i {
+    font-size: 19px;
+    color: rgb(255, 255, 255, 0.5);
+    padding: 10px 0 0 0;
+    cursor: pointer;
+}
   .result {
     color: #fff;
     font-size: 14px;
@@ -521,8 +720,55 @@
     text-decoration: none;
     font-weight: 400;
     color: #fff;
-    font-size: 14px;
+    font-size: 10px;
   }
+  .favourite i {
+    font-size: 19px;
+    color: rgb(255, 255, 255, 0.5);
+    padding: 10px 0px 0 0;
+    cursor: pointer;
+}
+  .title {
+    white-space: nowrap;
+    width: 85%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+    padding: 5px 0;
+}
+  .film_component .movie .year {
+
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-right: 116px;
+    margin-top: -179px;
+    z-index: 2;
+  }
+  .film_component .list {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    row-gap: 0;
+}
+  
+    .film_component .movie .year p {
+      margin: 0;
+      width: 4rem;
+      /* padding: 10px 50px; */
+      height: 25px;
+      border-radius: 5px;
+      display: inline-block;
+      align-items: center;
+      display: inline-block;
+        line-height: 25px;
+      color: #ffffff;
+      text-align: center;
+      font-family: "Inter", sans-serif;
+      font-size: 8px;
+      font-weight: 500;
+      position: relative;
+      left: 4.7rem;
+    }
   .result {
     color: #fff;
     font-size: 10px;

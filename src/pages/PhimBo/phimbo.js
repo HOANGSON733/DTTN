@@ -88,6 +88,9 @@ const SeriesMovie = () => {
                 <div className="title">
                   <Link to={`/movie/detailsmovie/${movie.slug}`}>
                     {movie.name}
+                    <p>
+                      {movie.origin_name} ({movie.year})
+                    </p>
                   </Link>
                 </div>
               </div>
