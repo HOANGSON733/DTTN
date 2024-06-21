@@ -124,7 +124,7 @@ body {
 .info .info_item h5 {
   display: grid;
   grid-template-columns: 120px 1fr;
-  border-bottom: 1px solid #253d60;
+  border-bottom: 1px solid #000000;
   padding: 15px 0;
 }
 
@@ -278,7 +278,6 @@ body {
     font-family: "Inter", sans-serif;
     padding: 1px 5px;
     font-size: 12px;
-    background-color: #da2f68;
     color: #fff;
     margin: 0 5px 0 0;
     border-radius: 4px;

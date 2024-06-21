@@ -84,7 +84,7 @@ const DetailsMovie = () => {
         <div className="not_found">
           <p>{error}</p>
           <button>
-            <Link to={"/Movix"}>Về Trang Chủ</Link>
+            <Link to={"/"}>Về Trang Chủ</Link>
           </button>
         </div>
       ) : (
@@ -111,13 +111,7 @@ const DetailsMovie = () => {
                         ))}
                     </div>
                     <div className="watch">
-                      {/* <div className='quality'>
-                                                {details.episode_current && details.episode_current === 'Full' ? (
-                                                    <h3 style={{ fontSize: "18px" }}>{details.episode_current}</h3>
-                                                ) : (
-                                                    <h3>{details.episode_current}</h3>
-                                                )}
-                                            </div> */}
+                     
                       {details.trailer_url === "" ? (
                         ""
                       ) : (
