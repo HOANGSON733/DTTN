@@ -4,18 +4,15 @@ import { getDetailMovie } from "../../Api/api";
 import Loading from "../../components/Loading/loading";
 import Hls from "hls.js";
 import "./watch.css";
-import { MdOutlinePlayCircle } from "react-icons/md";
 const DetailsMovie = () => {
   const { slug } = useParams();
   const [details, setDetails] = useState(null);
   const [episodes, setEpisodes] = useState([]);
   const [filteredEpisodes, setFilteredEpisodes] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [bookmarkedEpisodes, setBookmarkedEpisodes] = useState(
-    new Set(JSON.parse(localStorage.getItem("bookmarkedEpisodes")) || [])
-  );
+ 
   const [isLightsOff, setIsLightsOff] = useState(false);
-  const [hasInteracted, setHasInteracted] = useState(false);
+  
   const videoRef = useRef(null);
   const [activeLink, setActiveLink] = useState("");
   const [watchedEpisodes, setWatchedEpisodes] = useState(
@@ -33,7 +30,7 @@ const DetailsMovie = () => {
       );
       return updatedWatched;
     });
-
+    
     const video = videoRef.current;
     if (video) {
       console.log("Setting video source to:", link);
@@ -70,35 +67,11 @@ const DetailsMovie = () => {
     );
   };
 
-  const toggleBookmark = (link) => {
-    setBookmarkedEpisodes((prevBookmarks) => {
-      const updatedBookmarks = new Set(prevBookmarks);
-      if (updatedBookmarks.has(link)) {
-        updatedBookmarks.delete(link);
-      } else {
-        updatedBookmarks.add(link);
-      }
-      localStorage.setItem(
-        "bookmarkedEpisodes",
-        JSON.stringify([...updatedBookmarks])
-      );
-      return updatedBookmarks;
-    });
-  };
 
   const toggleLights = () => {
     setIsLightsOff(!isLightsOff);
   };
 
-  const handlePlay = () => {
-    setHasInteracted(true);
-    const video = videoRef.current;
-    if (video) {
-      video.play().catch((error) => {
-        console.error("Error attempting to play:", error);
-      });
-    }
-  };
 
   useEffect(() => {
     const fetchData = async () => {

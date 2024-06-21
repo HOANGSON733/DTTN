@@ -167,7 +167,7 @@ const DetailsMovie = () => {
                         </div>
                       )}
                     </div>
-                    <h5>Mô tả phim</h5>
+                
                     <p>{details.content}</p>
                   </div>
                 </div>

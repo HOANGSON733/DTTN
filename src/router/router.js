@@ -18,7 +18,7 @@ const Router = () => {
   return (
     <div>
       <Routes>
-        <Route path="/Movix" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/" element={<Home />} />
         <Route path="/movie/detailsmovie/:slug" element={<DetailsMovie />} />
         <Route
@@ -40,9 +40,13 @@ const Router = () => {
           path="*"
           element={
             <div className="not_found">
-              <p>Không tìm thấy trang!</p>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
+                alt="Netflix Logo"
+              />
+              <p>Lost your way? The page you're looking for isn't available.</p>
               <button>
-                <Link to={"/Movix"}>Về Trang Chủ</Link>
+                <Link to={"/"}>Go to Homepage</Link>
               </button>
             </div>
           }

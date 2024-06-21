@@ -5,7 +5,7 @@
 
 .film_component .list {
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   /* gap: 1px; */
 }
 
@@ -124,7 +124,7 @@
   font-size: 12px;
   font-weight: 500;
   position: relative;
-  left: 3.4rem;
+  left: 3rem;
 }
 .not_found_film {
   background-color: #000000;
@@ -157,7 +157,7 @@
 @media (max-width: 3000px) and (min-width: 2000px) {
   .film_component .list {
     display: grid;
-    grid-template-columns: repeat(8, auto);
+    grid-template-columns: repeat(7, auto);
     /* gap: 1px; */
   }
 }
@@ -165,7 +165,7 @@
 @media (max-width: 2000px) and (min-width: 1440px) {
   .film_component .list {
     display: grid;
-    grid-template-columns: repeat(6, auto);
+    grid-template-columns: repeat(5, auto);
     /* gap: 1px; */
   }
 

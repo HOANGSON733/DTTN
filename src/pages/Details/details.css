@@ -124,7 +124,7 @@ body {
 .info .info_item h5 {
   display: grid;
   grid-template-columns: 120px 1fr;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #666666;
   padding: 15px 0;
 }
 

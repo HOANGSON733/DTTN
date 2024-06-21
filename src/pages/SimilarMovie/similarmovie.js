@@ -64,7 +64,7 @@ const DetailsMovie = () => {
       {
         breakpoint: 2000,
         settings: {
-          slidesToShow: 7,
+          slidesToShow: 6,
           slidesToScroll: 3,
         },
       },
@@ -168,12 +168,10 @@ const DetailsMovie = () => {
                           </div>
                         </Link>
                         <div className="favourite">
-                          <div className="year">
-                            <p>{movie.episode_current}</p>
-                          </div>
+                          
                           {favourite.includes(movie.slug) ? (
                             <i
-                              style={{ color: "#f89e00" }}
+                              style={{ color: "#ff8800" }}
                               onClick={() => handleClickFavourite(movie.slug)}
                               className="fa-solid fa-bookmark"
                             ></i>

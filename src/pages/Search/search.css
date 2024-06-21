@@ -75,40 +75,43 @@
   color: #fff;
   padding: 10px 0;
 }
-
 .not_found {
-  height: 100vh;
-  background-image: url("#");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  /* position: relative;
-    z-index: 100; */
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  overflow: hidden;
-}
-
-.not_found p {
-  font-family: "Inter", sans-serif;
-  font-size: 2.6rem;
-  color: #fff;
-  padding: 0 5%;
-}
-
-.not_found button {
-  padding: 15px 25px;
-  background: linear-gradient(98.37deg, #f89e00 0.99%, #da2f68 100%);
-  border-radius: 20em;
-}
-
-.not_found a {
-  color: #fff;
-  text-decoration: none;
-}
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(190,0,0,1) 0%, rgba(0,0,0,0.9725140056022409) 81%);        
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+    text-align: center; /* Center the text horizontally */
+  }
+  
+  .not_found p {
+    font-family: "Netflix Sans", sans-serif; /* Use a similar font to Netflix */
+    font-size: 2.4rem;
+    color: #c2c2c2; /* White text color */
+  }
+  .not_found img{
+    width: 500px;
+    margin-top: -50px;
+    margin-bottom: 200px;
+  }
+  .not_found button {
+    
+    color: #fff; /* White text color */
+    border: none;
+    cursor: pointer; /* Add a pointer cursor on hover */
+  }
+  
+ 
+  
+  .not_found a {
+    color: #fff; /* White text color */
+    text-decoration: none;
+  }
+  
+  
 
 .paginate {
   display: flex;

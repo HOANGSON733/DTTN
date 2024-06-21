@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./navbar.css";
 import ModalSearch from "../ModalSearch/modalsearch";
 import { getGenres } from "../../Api/api";
@@ -91,7 +91,6 @@ const Navbar = () => {
     "logo",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEN3UB3h1qrRON7O1XZxgqETeyN5OlV8_wsg&s"
   );
-  const logo = localStorage.getItem("logo");
 
   return (
     <>
@@ -123,7 +122,7 @@ const Navbar = () => {
                 <Link
                   style={menu === "trang_chu" ? { color: "red" } : {}}
                   onClick={() => handleClick("trang_chu")}
-                  to="/Movix"
+                  to="/"
                 >
                   Trang Chủ
                 </Link>

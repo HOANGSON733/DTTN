@@ -42,14 +42,14 @@ const ShowHomePage = () => {
       {
         breakpoint: 2000,
         settings: {
-          slidesToShow: 7,
+          slidesToShow: 6,
           slidesToScroll: 3,
         },
       },
       {
         breakpoint: 1400,
         settings: {
-          slidesToShow: 6,
+          slidesToShow: 5,
           slidesToScroll: 3,
         },
       },
